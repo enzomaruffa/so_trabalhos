@@ -49,8 +49,8 @@ int task_getprio (task_t *task) {
 
 task_t *scheduler() 
 {
-    task_t *runner = current_task->next;
-    task_t *priority_task = current_task;
+    task_t *runner = (*dispatcher_active_tasks)->next;
+    task_t *priority_task = (*dispatcher_active_tasks);
 
     while (runner != (*dispatcher_active_tasks)) {
         if (runner->dynamic_prio < priority_task->dynamic_prio) {
