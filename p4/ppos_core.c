@@ -10,8 +10,8 @@
 
 int last_task_id = 0;
 
-task_t *main_task;
-task_t *dispatcher_task;
+task_t main_task;
+task_t dispatcher_task;
 task_t *current_task;
 task_t *previous_task = NULL;
 task_t *to_be_next_task = NULL; //used when task exits
@@ -92,10 +92,9 @@ void dispatcher_body () // dispatcher é uma tarefa
 // cria a tarefa dispatcher
 void create_dispatcher() 
 {
-    dispatcher_task = malloc(sizeof(task_t));
-    task_create(dispatcher_task, dispatcher_body, NULL);
+    task_create(&dispatcher_task, dispatcher_body, NULL);
 
-    dispatcher_active_tasks = (task_t **)malloc(sizeof(task_t *));
+    dispatcher_active_tasks = malloc(sizeof(task_t *));
     (*dispatcher_active_tasks) = NULL;
     userTasks = 0;
 }
@@ -106,16 +105,15 @@ void create_dispatcher()
 void ppos_init () 
 {
     /* cria a main task*/
-    main_task = malloc(sizeof(task_t));
-    task_create(main_task, NULL, NULL);
-    current_task = main_task;
+    task_create(&main_task, NULL, NULL);
+    current_task = &main_task;
 
     /* desativa o buffer da saida padrao (stdout), usado pela função printf */
     setvbuf (stdout, 0, _IONBF, 0) ;
     create_dispatcher() ;
 }
 
-void task_destroy(task_t *task) {
+void task_stack_destroy(task_t *task) {
     free(task->stack);
 }
 
@@ -164,20 +162,24 @@ void task_exit (int exitCode)
 
         queue_remove((queue_t**) dispatcher_active_tasks, (queue_t*) current_task); //remove da lista de tarefas
         userTasks -= 1; 
-        //task_destroy(current_task);
+        task_stack_destroy(current_task);
         current_task = NULL; // seta tarefa atual como nula, assim não tenta atribuir contexto pra task que não existe
 
         task_yield(); //cede pro dispatcher
     } else {
-        //free dispatcher
-        task_switch(main_task);
+        task_stack_destroy(&dispatcher_task);
+        free(dispatcher_active_tasks);
+        
+        current_task = NULL;
+
+        task_switch(&main_task);
     }
 }
 
 // Tarefa solta o processador
 void task_yield () 
 {
-    task_switch(dispatcher_task);
+    task_switch(&dispatcher_task);
 }
 
 // alterna a execução para a tarefa indicada

@@ -1,0 +1,650 @@
+==9735== Memcheck, a memory error detector
+==9735== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==9735== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info
+==9735== Command: ./test
+==9735== Parent PID: 2362
+==9735== 
+==9735== Warning: client switching stacks?  SP change: 0xffefff918 --> 0x52114a8
+==9735==          to suppress, use: --max-stackframe=68616643696 or greater
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108E2F: task_switch (ppos_core.c:197)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108ACA: dispatcher_body (ppos_core.c:76)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108A16: scheduler (ppos_core.c:52)
+==9735==    by 0x108ADB: dispatcher_body (ppos_core.c:77)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x108A98: scheduler (ppos_core.c:55)
+==9735==    by 0x108ADB: dispatcher_body (ppos_core.c:77)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108A3C: scheduler (ppos_core.c:56)
+==9735==    by 0x108ADB: dispatcher_body (ppos_core.c:77)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108A9E: scheduler (ppos_core.c:65)
+==9735==    by 0x108ADB: dispatcher_body (ppos_core.c:77)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x10898C: task_setprio (ppos_core.c:31)
+==9735==    by 0x108AB1: scheduler (ppos_core.c:65)
+==9735==    by 0x108ADB: dispatcher_body (ppos_core.c:77)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108995: task_setprio (ppos_core.c:32)
+==9735==    by 0x108AB1: scheduler (ppos_core.c:65)
+==9735==    by 0x108ADB: dispatcher_body (ppos_core.c:77)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x10899F: task_setprio (ppos_core.c:32)
+==9735==    by 0x108AB1: scheduler (ppos_core.c:65)
+==9735==    by 0x108ADB: dispatcher_body (ppos_core.c:77)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x1089A9: task_setprio (ppos_core.c:32)
+==9735==    by 0x108AB1: scheduler (ppos_core.c:65)
+==9735==    by 0x108ADB: dispatcher_body (ppos_core.c:77)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108ADC: dispatcher_body (ppos_core.c:77)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108AF7: dispatcher_body (ppos_core.c:82)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x108AFC: dispatcher_body (ppos_core.c:82)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108AFE: dispatcher_body (ppos_core.c:85)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Syscall param rt_sigprocmask(set) contains uninitialised byte(s)
+==9735==    at 0x4E8235A: swapcontext (swapcontext.S:79)
+==9735==    by 0x108E16: task_switch (ppos_core.c:192)
+==9735==    by 0x108B09: dispatcher_body (ppos_core.c:85)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x4E82365: swapcontext (swapcontext.S:87)
+==9735==    by 0x108E16: task_switch (ppos_core.c:192)
+==9735==    by 0x108B09: dispatcher_body (ppos_core.c:85)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x4E8236E: swapcontext (swapcontext.S:89)
+==9735==    by 0x108E16: task_switch (ppos_core.c:192)
+==9735==    by 0x108B09: dispatcher_body (ppos_core.c:85)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x108DF7: task_switch (ppos_core.c:191)
+==9735==    by 0x108DC4: task_yield (ppos_core.c:182)
+==9735==    by 0x108E9D: Body (pingpong-scheduler.c:23)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x4E822D0: swapcontext (swapcontext.S:39)
+==9735==    by 0x108E16: task_switch (ppos_core.c:192)
+==9735==    by 0x108DC4: task_yield (ppos_core.c:182)
+==9735==    by 0x108E9D: Body (pingpong-scheduler.c:23)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x4E8232E: swapcontext (swapcontext.S:64)
+==9735==    by 0x108E16: task_switch (ppos_core.c:192)
+==9735==    by 0x108DC4: task_yield (ppos_core.c:182)
+==9735==    by 0x108E9D: Body (pingpong-scheduler.c:23)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Syscall param rt_sigprocmask(oldset) contains uninitialised byte(s)
+==9735==    at 0x4E8235A: swapcontext (swapcontext.S:79)
+==9735==    by 0x108E16: task_switch (ppos_core.c:192)
+==9735==    by 0x108DC4: task_yield (ppos_core.c:182)
+==9735==    by 0x108E9D: Body (pingpong-scheduler.c:23)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x4E8236C: swapcontext (swapcontext.S:88)
+==9735==    by 0x108E16: task_switch (ppos_core.c:192)
+==9735==    by 0x108B09: dispatcher_body (ppos_core.c:85)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x4E8236C: swapcontext (swapcontext.S:88)
+==9735==    by 0x108E16: task_switch (ppos_core.c:192)
+==9735==    by 0x108B09: dispatcher_body (ppos_core.c:85)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108A4A: scheduler (ppos_core.c:57)
+==9735==    by 0x108ADB: dispatcher_body (ppos_core.c:77)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108A57: scheduler (ppos_core.c:57)
+==9735==    by 0x108ADB: dispatcher_body (ppos_core.c:77)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108E2F: task_switch (ppos_core.c:197)
+==9735==    by 0x521952F: ???
+==9735==    by 0x108E9D: Body (pingpong-scheduler.c:23)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108DC7: task_yield (ppos_core.c:183)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108E9E: Body (pingpong-scheduler.c:20)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x108EA6: Body (pingpong-scheduler.c:20)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108E79: Body (pingpong-scheduler.c:22)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x4E888F3: vfprintf (vfprintf.c:1637)
+==9735==    by 0x4E8A862: buffered_vfprintf (vfprintf.c:2325)
+==9735==    by 0x4E87A84: vfprintf (vfprintf.c:1293)
+==9735==    by 0x4E905A8: printf (printf.c:33)
+==9735==    by 0x108E93: Body (pingpong-scheduler.c:22)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x4C30D22: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x4E89955: vfprintf (vfprintf.c:1637)
+==9735==    by 0x4E8A862: buffered_vfprintf (vfprintf.c:2325)
+==9735==    by 0x4E87A84: vfprintf (vfprintf.c:1293)
+==9735==    by 0x4E905A8: printf (printf.c:33)
+==9735==    by 0x108E93: Body (pingpong-scheduler.c:22)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x4C30D34: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x4E89955: vfprintf (vfprintf.c:1637)
+==9735==    by 0x4E8A862: buffered_vfprintf (vfprintf.c:2325)
+==9735==    by 0x4E87A84: vfprintf (vfprintf.c:1293)
+==9735==    by 0x4E905A8: printf (printf.c:33)
+==9735==    by 0x108E93: Body (pingpong-scheduler.c:22)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x4EB7964: _IO_default_xsputn (genops.c:450)
+==9735==    by 0x4E8955B: vfprintf (vfprintf.c:1637)
+==9735==    by 0x4E8A862: buffered_vfprintf (vfprintf.c:2325)
+==9735==    by 0x4E87A84: vfprintf (vfprintf.c:1293)
+==9735==    by 0x4E905A8: printf (printf.c:33)
+==9735==    by 0x108E93: Body (pingpong-scheduler.c:22)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x4EB7974: _IO_default_xsputn (genops.c:449)
+==9735==    by 0x4E8955B: vfprintf (vfprintf.c:1637)
+==9735==    by 0x4E8A862: buffered_vfprintf (vfprintf.c:2325)
+==9735==    by 0x4E87A84: vfprintf (vfprintf.c:1293)
+==9735==    by 0x4E905A8: printf (printf.c:33)
+==9735==    by 0x108E93: Body (pingpong-scheduler.c:22)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x4E8831A: vfprintf (vfprintf.c:1636)
+==9735==    by 0x4E8A862: buffered_vfprintf (vfprintf.c:2325)
+==9735==    by 0x4E87A84: vfprintf (vfprintf.c:1293)
+==9735==    by 0x4E905A8: printf (printf.c:33)
+==9735==    by 0x108E93: Body (pingpong-scheduler.c:22)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x4E84C2B: _itoa_word (_itoa.c:179)
+==9735==    by 0x4E893E2: vfprintf (vfprintf.c:1636)
+==9735==    by 0x4E8A862: buffered_vfprintf (vfprintf.c:2325)
+==9735==    by 0x4E87A84: vfprintf (vfprintf.c:1293)
+==9735==    by 0x4E905A8: printf (printf.c:33)
+==9735==    by 0x108E93: Body (pingpong-scheduler.c:22)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x4E84C35: _itoa_word (_itoa.c:179)
+==9735==    by 0x4E893E2: vfprintf (vfprintf.c:1636)
+==9735==    by 0x4E8A862: buffered_vfprintf (vfprintf.c:2325)
+==9735==    by 0x4E87A84: vfprintf (vfprintf.c:1293)
+==9735==    by 0x4E905A8: printf (printf.c:33)
+==9735==    by 0x108E93: Body (pingpong-scheduler.c:22)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x4E894F9: vfprintf (vfprintf.c:1636)
+==9735==    by 0x4E8A862: buffered_vfprintf (vfprintf.c:2325)
+==9735==    by 0x4E87A84: vfprintf (vfprintf.c:1293)
+==9735==    by 0x4E905A8: printf (printf.c:33)
+==9735==    by 0x108E93: Body (pingpong-scheduler.c:22)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x4E883C6: vfprintf (vfprintf.c:1636)
+==9735==    by 0x4E8A862: buffered_vfprintf (vfprintf.c:2325)
+==9735==    by 0x4E87A84: vfprintf (vfprintf.c:1293)
+==9735==    by 0x4E905A8: printf (printf.c:33)
+==9735==    by 0x108E93: Body (pingpong-scheduler.c:22)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x4E88449: vfprintf (vfprintf.c:1636)
+==9735==    by 0x4E8A862: buffered_vfprintf (vfprintf.c:2325)
+==9735==    by 0x4E87A84: vfprintf (vfprintf.c:1293)
+==9735==    by 0x4E905A8: printf (printf.c:33)
+==9735==    by 0x108E93: Body (pingpong-scheduler.c:22)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108E2F: task_switch (ppos_core.c:197)
+==9735==    by 0x522156F: ???
+==9735==    by 0x108E9D: Body (pingpong-scheduler.c:23)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108E2F: task_switch (ppos_core.c:197)
+==9735==    by 0x52295AF: ???
+==9735==    by 0x108E9D: Body (pingpong-scheduler.c:23)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108E2F: task_switch (ppos_core.c:197)
+==9735==    by 0x52315EF: ???
+==9735==    by 0x108E9D: Body (pingpong-scheduler.c:23)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108EA8: Body (pingpong-scheduler.c:25)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108D27: task_exit (ppos_core.c:161)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x109012: check_queue_empty (queue.c:22)
+==9735==    by 0x1091B7: queue_remove (queue.c:118)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5211500 is 0 bytes inside a block of size 8 alloc'd
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108B46: create_dispatcher (ppos_core.c:97)
+==9735==    by 0x108BB8: ppos_init (ppos_core.c:113)
+==9735==    by 0x108EF1: main (pingpong-scheduler.c:33)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x109035: check_element_null (queue.c:32)
+==9735==    by 0x1091D1: queue_remove (queue.c:125)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x1091E4: queue_remove (queue.c:132)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5211500 is 0 bytes inside a block of size 8 alloc'd
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108B46: create_dispatcher (ppos_core.c:97)
+==9735==    by 0x108BB8: ppos_init (ppos_core.c:113)
+==9735==    by 0x108EF1: main (pingpong-scheduler.c:33)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x109061: check_element_belongs_queue (queue.c:46)
+==9735==    by 0x1091F5: queue_remove (queue.c:132)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x109205: queue_remove (queue.c:140)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5211500 is 0 bytes inside a block of size 8 alloc'd
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108B46: create_dispatcher (ppos_core.c:97)
+==9735==    by 0x108BB8: ppos_init (ppos_core.c:113)
+==9735==    by 0x108EF1: main (pingpong-scheduler.c:33)
+==9735== 
+==9735== Conditional jump or move depends on uninitialised value(s)
+==9735==    at 0x10920C: queue_remove (queue.c:140)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x109212: queue_remove (queue.c:141)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Invalid write of size 8
+==9735==    at 0x10921A: queue_remove (queue.c:141)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5211500 is 0 bytes inside a block of size 8 alloc'd
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108B46: create_dispatcher (ppos_core.c:97)
+==9735==    by 0x108BB8: ppos_init (ppos_core.c:113)
+==9735==    by 0x108EF1: main (pingpong-scheduler.c:33)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x109221: queue_remove (queue.c:144)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5211500 is 0 bytes inside a block of size 8 alloc'd
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108B46: create_dispatcher (ppos_core.c:97)
+==9735==    by 0x108BB8: ppos_init (ppos_core.c:113)
+==9735==    by 0x108EF1: main (pingpong-scheduler.c:33)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x109240: queue_remove (queue.c:148)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x109247: queue_remove (queue.c:148)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x109253: queue_remove (queue.c:149)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x10925B: queue_remove (queue.c:149)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x109265: queue_remove (queue.c:151)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x109271: queue_remove (queue.c:152)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Use of uninitialised value of size 8
+==9735==    at 0x108BCC: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D68: task_exit (ppos_core.c:165)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735== 
+==9735== Invalid write of size 8
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D68: task_exit (ppos_core.c:165)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5219488 is 32,568 bytes inside a block of size 32,768 free'd
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D68: task_exit (ppos_core.c:165)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Block was alloc'd at
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108C27: task_create (ppos_core.c:129)
+==9735==    by 0x108F0B: main (pingpong-scheduler.c:35)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x4C2ED5F: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D68: task_exit (ppos_core.c:165)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5219488 is 32,568 bytes inside a block of size 32,768 free'd
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D68: task_exit (ppos_core.c:165)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Block was alloc'd at
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108C27: task_create (ppos_core.c:129)
+==9735==    by 0x108F0B: main (pingpong-scheduler.c:35)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x4C2ED63: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D68: task_exit (ppos_core.c:165)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x52194c0 is 32,624 bytes inside a block of size 32,768 free'd
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D68: task_exit (ppos_core.c:165)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Block was alloc'd at
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108C27: task_create (ppos_core.c:129)
+==9735==    by 0x108F0B: main (pingpong-scheduler.c:35)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x4C2ED64: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D68: task_exit (ppos_core.c:165)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x52194c8 is 32,632 bytes inside a block of size 32,768 free'd
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D68: task_exit (ppos_core.c:165)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Block was alloc'd at
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108C27: task_create (ppos_core.c:129)
+==9735==    by 0x108F0B: main (pingpong-scheduler.c:35)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x108BDC: task_stack_destroy (ppos_core.c:118)
+==9735==    by 0x108D68: task_exit (ppos_core.c:165)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x52194e0 is 32,656 bytes inside a block of size 32,768 free'd
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D68: task_exit (ppos_core.c:165)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Block was alloc'd at
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108C27: task_create (ppos_core.c:129)
+==9735==    by 0x108F0B: main (pingpong-scheduler.c:35)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x108BDD: task_stack_destroy (ppos_core.c:118)
+==9735==    by 0x108D68: task_exit (ppos_core.c:165)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x52194e8 is 32,664 bytes inside a block of size 32,768 free'd
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D68: task_exit (ppos_core.c:165)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Block was alloc'd at
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108C27: task_create (ppos_core.c:129)
+==9735==    by 0x108F0B: main (pingpong-scheduler.c:35)
+==9735== 
+==9735== Invalid write of size 8
+==9735==    at 0x109235: queue_remove (queue.c:145)
+==9735==    by 0x108D4A: task_exit (ppos_core.c:163)
+==9735==    by 0x108EC9: Body (pingpong-scheduler.c:26)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5211500 is 0 bytes inside a block of size 8 alloc'd
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108B46: create_dispatcher (ppos_core.c:97)
+==9735==    by 0x108BB8: ppos_init (ppos_core.c:113)
+==9735==    by 0x108EF1: main (pingpong-scheduler.c:33)
+==9735== 
+==9735== Invalid write of size 8
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D8B: task_exit (ppos_core.c:170)
+==9735==    by 0x108B1D: dispatcher_body (ppos_core.c:89)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5211408 is 32,584 bytes inside a block of size 32,768 free'd
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D8B: task_exit (ppos_core.c:170)
+==9735==    by 0x108B1D: dispatcher_body (ppos_core.c:89)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Block was alloc'd at
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108C27: task_create (ppos_core.c:129)
+==9735==    by 0x108B3C: create_dispatcher (ppos_core.c:95)
+==9735==    by 0x108BB8: ppos_init (ppos_core.c:113)
+==9735==    by 0x108EF1: main (pingpong-scheduler.c:33)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x4C2ED5F: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D8B: task_exit (ppos_core.c:170)
+==9735==    by 0x108B1D: dispatcher_body (ppos_core.c:89)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5211408 is 32,584 bytes inside a block of size 32,768 free'd
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D8B: task_exit (ppos_core.c:170)
+==9735==    by 0x108B1D: dispatcher_body (ppos_core.c:89)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Block was alloc'd at
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108C27: task_create (ppos_core.c:129)
+==9735==    by 0x108B3C: create_dispatcher (ppos_core.c:95)
+==9735==    by 0x108BB8: ppos_init (ppos_core.c:113)
+==9735==    by 0x108EF1: main (pingpong-scheduler.c:33)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x4C2ED63: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D8B: task_exit (ppos_core.c:170)
+==9735==    by 0x108B1D: dispatcher_body (ppos_core.c:89)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5211440 is 32,640 bytes inside a block of size 32,768 free'd
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D8B: task_exit (ppos_core.c:170)
+==9735==    by 0x108B1D: dispatcher_body (ppos_core.c:89)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Block was alloc'd at
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108C27: task_create (ppos_core.c:129)
+==9735==    by 0x108B3C: create_dispatcher (ppos_core.c:95)
+==9735==    by 0x108BB8: ppos_init (ppos_core.c:113)
+==9735==    by 0x108EF1: main (pingpong-scheduler.c:33)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x4C2ED64: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D8B: task_exit (ppos_core.c:170)
+==9735==    by 0x108B1D: dispatcher_body (ppos_core.c:89)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5211448 is 32,648 bytes inside a block of size 32,768 free'd
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D8B: task_exit (ppos_core.c:170)
+==9735==    by 0x108B1D: dispatcher_body (ppos_core.c:89)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Block was alloc'd at
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108C27: task_create (ppos_core.c:129)
+==9735==    by 0x108B3C: create_dispatcher (ppos_core.c:95)
+==9735==    by 0x108BB8: ppos_init (ppos_core.c:113)
+==9735==    by 0x108EF1: main (pingpong-scheduler.c:33)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x108BDC: task_stack_destroy (ppos_core.c:118)
+==9735==    by 0x108D8B: task_exit (ppos_core.c:170)
+==9735==    by 0x108B1D: dispatcher_body (ppos_core.c:89)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5211460 is 32,672 bytes inside a block of size 32,768 free'd
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D8B: task_exit (ppos_core.c:170)
+==9735==    by 0x108B1D: dispatcher_body (ppos_core.c:89)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Block was alloc'd at
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108C27: task_create (ppos_core.c:129)
+==9735==    by 0x108B3C: create_dispatcher (ppos_core.c:95)
+==9735==    by 0x108BB8: ppos_init (ppos_core.c:113)
+==9735==    by 0x108EF1: main (pingpong-scheduler.c:33)
+==9735== 
+==9735== Invalid read of size 8
+==9735==    at 0x108BDD: task_stack_destroy (ppos_core.c:118)
+==9735==    by 0x108D8B: task_exit (ppos_core.c:170)
+==9735==    by 0x108B1D: dispatcher_body (ppos_core.c:89)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Address 0x5211468 is 32,680 bytes inside a block of size 32,768 free'd
+==9735==    at 0x4C2ED5B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108BDA: task_stack_destroy (ppos_core.c:117)
+==9735==    by 0x108D8B: task_exit (ppos_core.c:170)
+==9735==    by 0x108B1D: dispatcher_body (ppos_core.c:89)
+==9735==    by 0x4E84A8F: ??? (in /lib/x86_64-linux-gnu/libc-2.24.so)
+==9735==  Block was alloc'd at
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108C27: task_create (ppos_core.c:129)
+==9735==    by 0x108B3C: create_dispatcher (ppos_core.c:95)
+==9735==    by 0x108BB8: ppos_init (ppos_core.c:113)
+==9735==    by 0x108EF1: main (pingpong-scheduler.c:33)
+==9735== 
+==9735== Warning: client switching stacks?  SP change: 0x5211448 --> 0xffefff920
+==9735==          to suppress, use: --max-stackframe=68616643800 or greater
+==9735== 
+==9735== HEAP SUMMARY:
+==9735==     in use at exit: 32,768 bytes in 1 blocks
+==9735==   total heap usage: 9 allocs, 8 frees, 230,408 bytes allocated
+==9735== 
+==9735== 32,768 bytes in 1 blocks are still reachable in loss record 1 of 1
+==9735==    at 0x4C2DB2F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9735==    by 0x108C27: task_create (ppos_core.c:129)
+==9735==    by 0x108B82: ppos_init (ppos_core.c:108)
+==9735==    by 0x108EF1: main (pingpong-scheduler.c:33)
+==9735== 
+==9735== LEAK SUMMARY:
+==9735==    definitely lost: 0 bytes in 0 blocks
+==9735==    indirectly lost: 0 bytes in 0 blocks
+==9735==      possibly lost: 0 bytes in 0 blocks
+==9735==    still reachable: 32,768 bytes in 1 blocks
+==9735==         suppressed: 0 bytes in 0 blocks
+==9735== 
+==9735== For counts of detected and suppressed errors, rerun with: -v
+==9735== Use --track-origins=yes to see where uninitialised values come from
+==9735== ERROR SUMMARY: 2794 errors from 75 contexts (suppressed: 0 from 0)

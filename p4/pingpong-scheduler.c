@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include "ppos.h"
 
-task_t Pang, Peng, Ping, Pong, Pung ;
+task_t Pang, Peng, Ping, Pong, Pung, Cheng ;
 
 // corpo das threads
 void Body (void * arg)
