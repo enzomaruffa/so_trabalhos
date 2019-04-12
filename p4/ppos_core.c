@@ -29,10 +29,10 @@ void task_setprio (task_t *task, int prio) {
         return;
     }
     if (task != NULL) {
-        task->prio = prio;
+        task->prio = task->dynamic_prio = prio;
         return;
     }
-    current_task->prio = prio;
+    current_task->prio = current_task->dynamic_prio = prio;
     return;
 }
 
@@ -53,18 +53,16 @@ task_t *scheduler()
     task_t *priority_task = current_task;
 
     while (runner != (*dispatcher_active_tasks)) {
-        if (runner->prio < priority_task->prio) {
-            // task_setprio(priority_task, priority_task->prio - 1);
-            priority_task--;
+        if (runner->dynamic_prio < priority_task->dynamic_prio) {
+            priority_task->dynamic_prio--;
             priority_task = runner;
         } else {
-            // task_setprio(runner, runner->prio - 1);
-            runner->prio--;
+            runner->dynamic_prio--;
         }
         runner = runner->next;
     }
 
-    task_setprio(priority_task, 0);
+    task_setprio(priority_task, priority_task->prio);
 
     return priority_task;
 }

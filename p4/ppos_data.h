@@ -18,6 +18,7 @@ typedef struct task_t
    ucontext_t context ;			// contexto armazenado da tarefa
    void *stack ;			// aponta para a pilha da tarefa
    int prio;
+   int dynamic_prio;
    // ... (outros campos serão adicionados mais tarde)
 } task_t ;
 
