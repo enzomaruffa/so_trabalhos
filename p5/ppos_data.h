@@ -20,6 +20,7 @@ typedef struct task_t
    int prio;
    int dynamic_prio;
    int is_user_task;
+   int ticks;
    // ... (outros campos serão adicionados mais tarde)
 } task_t ;
 

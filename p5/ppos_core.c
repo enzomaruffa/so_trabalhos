@@ -1,12 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <ucontext.h>
+#include <signal.h>
+#include <sys/time.h>
 #include "ppos.h"
 #include "queue.h"
 
 #define STACKSIZE 32768
 #define MIN_PRIORITY -20
 #define MAX_PRIORITY 20
+#define QUANTUM 20
 
 int last_task_id = 0;
 
@@ -18,6 +21,25 @@ task_t *to_be_next_task = NULL; //used when task exits
 
 task_t **dispatcher_active_tasks;
 int userTasks = 0;
+
+// estrutura que define um tratador de sinal (deve ser global ou static)
+struct sigaction action ;
+
+// estrutura de inicialização to timer
+struct itimerval timer;
+
+// ========================== P5 ==============================
+void tick_handler() {
+    printf("tick handler\n");
+    if (!current_task->is_user_task) {
+        return;
+    }
+    current_task->ticks--;
+    if (current_task->ticks == 0) {
+        task_yield();
+    }
+    return;
+}
 
 // ========================== P4 ==============================
 
@@ -82,6 +104,7 @@ void dispatcher_body () // dispatcher é uma tarefa
         if (next)
         {
             //... // ações antes de lançar a tarefa "next", se houverem
+            next->ticks = QUANTUM;
             task_switch (next) ; // transfere controle para a tarefa "next"
             //... // ações após retornar da tarefa "next", se houverem
         }
@@ -94,6 +117,7 @@ void create_dispatcher()
 {
     dispatcher_task = malloc(sizeof(task_t));
     task_create(dispatcher_task, dispatcher_body, NULL);
+    dispatcher_task->is_user_task = 0;
 
     dispatcher_active_tasks = (task_t **)malloc(sizeof(task_t *));
     (*dispatcher_active_tasks) = NULL;
@@ -113,6 +137,30 @@ void ppos_init ()
     /* desativa o buffer da saida padrao (stdout), usado pela função printf */
     setvbuf (stdout, 0, _IONBF, 0) ;
     create_dispatcher() ;
+
+    action.sa_handler = tick_handler;
+    sigemptyset (&action.sa_mask) ;
+    action.sa_flags = 0 ;
+    if (sigaction (SIGALRM, &action, 0) < 0)
+    {
+        perror ("Erro em sigaction: ") ;
+        exit (1) ;
+    }
+
+    // ajusta valores do temporizador
+    timer.it_value.tv_usec = 0 ;      // primeiro disparo, em micro-segundos
+    timer.it_value.tv_sec  = 0 ;      // primeiro disparo, em segundos
+    timer.it_interval.tv_usec = 1000 ;   // disparos subsequentes, em micro-segundos
+    timer.it_interval.tv_sec  = 0 ;   // disparos subsequentes, em segundos
+
+    // arma o temporizador ITIMER_REAL (vide man setitimer)
+    if (setitimer (ITIMER_REAL, &timer, 0) < 0)
+    {
+        perror ("Erro em setitimer: ") ;
+        exit (1) ;
+    }
+
+
 }
 
 void task_destroy(task_t *task) {
@@ -130,7 +178,8 @@ int task_create (task_t *task,			// descritor da nova tarefa
     last_task_id++;
     task->stack = malloc(STACKSIZE) ;
     task_setprio(task, 0);
-    
+    task->is_user_task = 1;
+
     if (task->stack)
     {
         task->context.uc_stack.ss_sp = task->stack ;
