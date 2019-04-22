@@ -168,7 +168,7 @@ void ppos_init ()
     action.sa_handler = tick_handler;
     sigemptyset (&action.sa_mask) ;
     action.sa_flags = 0 ;
-    if (sigaction (SIGVTALRM, &action, 0) < 0)
+    if (sigaction (SIGALRM, &action, 0) < 0)
     {
         perror ("Erro em sigaction: ") ;
         exit (1) ;
@@ -183,7 +183,7 @@ void ppos_init ()
 
 
     // arma o temporizador
-    if (setitimer (ITIMER_VIRTUAL, &timer, 0) < 0)
+    if (setitimer (ITIMER_REAL, &timer, 0) < 0)
     {
         perror ("Erro em setitimer: ") ;
         exit (1) ;
