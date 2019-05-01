@@ -28,8 +28,32 @@ struct sigaction action ;
 // estrutura de inicialização to timer
 struct itimerval timer;
 
+// ========================== P6 ==============================
+
+//variavel que contem os milisegundos desde o inicio da execução
+unsigned int current_time = -1;
+
+unsigned int systime () {
+    return current_time;
+}
+
+void print_current_task_runtime() {
+    unsigned int execution_time = systime() - current_task->creation_time;
+
+    //subtrai 1 de activations pois a activation só é completa se todos os ticks forem zerados.
+    // um exemplo disso é uma tarefa que executa antes da primeira ativação acabar. se não excluirmos 
+    // esse primeiro caso, ela acabaria com QUANTUM + tempo de fato utilizado, sendo irreal
+    unsigned int processor_time = (current_task->activations-1)*QUANTUM + (QUANTUM - current_task->ticks);
+
+    // se a tarefa for o dispatcher, seta o tempo de processador como 0
+
+    processor_time = current_task == dispatcher_task ? 0 : processor_time;
+    printf("Task %d exit: execution time %u ms, processor time %u ms, %d activations\n", current_task->id, execution_time, processor_time, current_task->activations);
+}
+
 // ========================== P5 ==============================
 void tick_handler() {
+    current_time += 1;
     if (!current_task->is_user_task) {
         return;
     }
@@ -94,6 +118,7 @@ void dispatcher_body () // dispatcher é uma tarefa
     task_t *next = NULL;
     while ( userTasks > 0 )
     {
+        dispatcher_task->activations += 1;
         next = NULL;
         next = scheduler() ;  // scheduler é uma função
 
@@ -104,6 +129,7 @@ void dispatcher_body () // dispatcher é uma tarefa
         {
             //... // ações antes de lançar a tarefa "next", se houverem
             next->ticks = QUANTUM;
+            next->activations += 1;
             task_switch (next) ; // transfere controle para a tarefa "next"
             //... // ações após retornar da tarefa "next", se houverem
         }
@@ -128,6 +154,8 @@ void create_dispatcher()
 // Inicializa o sistema
 void ppos_init () 
 {
+    current_time = 0;
+
     /* cria a main task*/
     main_task = malloc(sizeof(task_t));
     task_create(main_task, NULL, NULL);
@@ -140,7 +168,7 @@ void ppos_init ()
     action.sa_handler = tick_handler;
     sigemptyset (&action.sa_mask) ;
     action.sa_flags = 0 ;
-    if (sigaction (SIGVTALRM, &action, 0) < 0)
+    if (sigaction (SIGALRM, &action, 0) < 0)
     {
         perror ("Erro em sigaction: ") ;
         exit (1) ;
@@ -152,8 +180,10 @@ void ppos_init ()
     timer.it_interval.tv_usec = 1000 ;   // disparos subsequentes, em micro-segundos
     timer.it_interval.tv_sec  = 0 ;   // disparos subsequentes, em segundos
 
+
+
     // arma o temporizador
-    if (setitimer (ITIMER_VIRTUAL, &timer, 0) < 0)
+    if (setitimer (ITIMER_REAL, &timer, 0) < 0)
     {
         perror ("Erro em setitimer: ") ;
         exit (1) ;
@@ -178,6 +208,9 @@ int task_create (task_t *task,			// descritor da nova tarefa
     task->stack = malloc(STACKSIZE) ;
     task_setprio(task, 0);
     task->is_user_task = 1;
+
+    task->creation_time = systime(); //cria com a data atual
+    task->activations = 0; //numero de vezes que foi ativa
 
     if (task->stack)
     {
@@ -207,6 +240,8 @@ int task_create (task_t *task,			// descritor da nova tarefa
 // Termina a tarefa corrente, indicando um valor de status encerramento
 void task_exit (int exitCode) 
 {
+    print_current_task_runtime();
+
     if (userTasks > 0 ) {
         to_be_next_task = current_task->next; //salva a proxima tarefa
 
