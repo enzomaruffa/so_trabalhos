@@ -90,6 +90,14 @@ void check_suspended_tasks() {
 int task_join (task_t *task) {
     task_t *self = current_task;
 
+
+    if (task == NULL || task->status == TASK_DEAD) {
+        #ifdef DEBUG
+            printf("[Task Join] a tarefa passada não existe. Retornando imediatamente.\n");
+        #endif
+        return -1;
+    }
+
     //remover da lista de ativas
     #ifdef DEBUG
         printf("[Task Join] removendo a tarefa de id %d da lista de tarefas ativas\n", self->id);
