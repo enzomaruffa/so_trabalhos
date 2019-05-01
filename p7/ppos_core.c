@@ -181,6 +181,9 @@ void ppos_init ()
     task_create(main_task, NULL, NULL);
     current_task = main_task;
 
+    dispatcher_task->id = 1;
+    main_task->id = 0;
+
     /* desativa o buffer da saida padrao (stdout), usado pela função printf */
     setvbuf (stdout, 0, _IONBF, 0) ;
 

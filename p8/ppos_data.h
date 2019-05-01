@@ -23,6 +23,9 @@ typedef struct task_t
    int ticks;
    int creation_time;
    int activations;
+   int status; //-1 = morta, 0 = suspensa, 1 = running
+   int exit_code;
+   struct task_t *waited_task; //se suspensa, qual tarefa está esperando
    // ... (outros campos serão adicionados mais tarde)
 } task_t ;
 

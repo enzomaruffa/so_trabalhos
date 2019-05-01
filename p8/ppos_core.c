@@ -11,6 +11,11 @@
 #define MAX_PRIORITY 20
 #define QUANTUM 20
 
+#define TASK_RUNNING 1
+#define TASK_DEAD -1
+#define TASK_SUSPENDED 0
+#define DEFAULT_EXIT_CODE 0
+
 int last_task_id = 0;
 
 task_t *main_task;
@@ -20,13 +25,98 @@ task_t *previous_task = NULL;
 task_t *to_be_next_task = NULL; //used when task exits
 
 task_t **dispatcher_active_tasks;
-int userTasks = 0;
+task_t **dispatcher_suspended_tasks;
+int active_tasks = 0;
+int suspended_tasks = 0;
 
 // estrutura que define um tratador de sinal (deve ser global ou static)
 struct sigaction action ;
 
 // estrutura de inicialização to timer
 struct itimerval timer;
+
+// ========================== P8 ==============================
+
+void wake_up_task(task_t *task) {
+    #ifdef DEBUG
+        printf("[Wake Up Task] acordando a tarefa de id %d\n", task->id);
+    #endif
+
+    //remover da lista de suspensas
+    queue_remove((queue_t**) dispatcher_suspended_tasks, (queue_t*) task); //remove da lista de tarefas
+    suspended_tasks -= 1; 
+
+    //adicionar na lista de suspensas
+    queue_append((queue_t**) dispatcher_active_tasks, (queue_t*) task);
+    active_tasks += 1;
+
+    task->status = TASK_RUNNING;
+    task->waited_task = NULL;
+}
+
+void check_suspended_tasks() {
+    #ifdef DEBUG
+        printf("[Check Suspended Task] verificando as %d tarefas suspensas\n", suspended_tasks);
+    #endif
+    if (suspended_tasks > 0) {
+        task_t *first_task = (*dispatcher_suspended_tasks);
+        #ifdef DEBUG
+            printf("[Check Suspended Task] primeira tarefa considerada: (id %d)\n", first_task->id);
+        #endif
+
+        // caso a primeira ja seja liberada, chama recursivamente para verificar as outras
+        if (first_task->waited_task->status == TASK_DEAD) {
+            #ifdef DEBUG
+                printf("[Check Suspended Task] acordando a primeira tarefa da lista de suspensas (id %d)\n", first_task->id);
+            #endif
+            wake_up_task(first_task);
+            check_suspended_tasks();
+        } else {
+            task_t *next_task = first_task->next;
+
+            while(next_task != first_task){
+                if (next_task->waited_task->status == TASK_DEAD) {
+                    next_task = next_task->next; //faz a mudança antes para evitar acessar elemento que saiu da lista
+                    wake_up_task(next_task->prev); 
+                } else {
+                    next_task = next_task->next;
+                }
+            }
+
+        }
+    }
+}
+
+int task_join (task_t *task) {
+    task_t *self = current_task;
+
+    //remover da lista de ativas
+    #ifdef DEBUG
+        printf("[Task Join] removendo a tarefa de id %d da lista de tarefas ativas\n", self->id);
+    #endif
+    queue_remove((queue_t**) dispatcher_active_tasks, (queue_t*) self); //remove da lista de tarefas
+    active_tasks -= 1; 
+
+    //adicionar na lista de suspensas
+    #ifdef DEBUG
+        printf("[Task Join] adicionando a tarefa de id %d na lista de tarefas suspensas\n", self->id);
+    #endif
+    queue_append((queue_t**) dispatcher_suspended_tasks, (queue_t*) self);
+    suspended_tasks += 1;
+
+    self->status = TASK_SUSPENDED;
+    self->waited_task = task;
+
+    //yield
+    task_yield();
+
+    //voltou
+    #ifdef DEBUG
+        printf("[Task Join] a tarefa de id %d voltou a ser processada\n", self->id);
+    #endif
+    int exit_code = task->exit_code;
+    return exit_code;
+}
 
 // ========================== P6 ==============================
 
@@ -88,8 +178,6 @@ int task_getprio (task_t *task) {
     return current_task->prio;
 }
 
-
-
 // ========================== Dispatcher ==============================
 
 task_t *scheduler() 
@@ -116,7 +204,7 @@ task_t *scheduler()
 void dispatcher_body () // dispatcher é uma tarefa
 {
     task_t *next = NULL;
-    while ( userTasks > 0 )
+    while ( active_tasks > 0 )
     {
         dispatcher_task->activations += 1;
         next = NULL;
@@ -139,6 +227,7 @@ void dispatcher_body () // dispatcher é uma tarefa
             //... // ações após retornar da tarefa "next", se houverem
         }
     }
+
     #ifdef DEBUG
         printf("[Dispatcher] Fim do dispatcher\n");
     #endif
@@ -156,11 +245,18 @@ void create_dispatcher()
     dispatcher_task->is_user_task = 0;
 
     #ifdef DEBUG
-        printf("[Create Dispatcher] Criando a lista de tarefas do dispatcher\n");
+        printf("[Create Dispatcher] Criando a lista de tarefas ativas do dispatcher\n");
     #endif
     dispatcher_active_tasks = (task_t **)malloc(sizeof(task_t *));
     (*dispatcher_active_tasks) = NULL;
-    userTasks = 0;
+    active_tasks = 0;
+
+    #ifdef DEBUG
+        printf("[Create Dispatcher] Criando a lista de tarefas suspensas do dispatcher\n");
+    #endif
+    dispatcher_suspended_tasks = (task_t **)malloc(sizeof(task_t *));
+    (*dispatcher_suspended_tasks) = NULL;
+    suspended_tasks = 0;
 }
 
 // ========================== Core ==============================
@@ -180,6 +276,9 @@ void ppos_init ()
     main_task = malloc(sizeof(task_t));
     task_create(main_task, NULL, NULL);
     current_task = main_task;
+
+    dispatcher_task->id = 1;
+    main_task->id = 0;
 
     /* desativa o buffer da saida padrao (stdout), usado pela função printf */
     setvbuf (stdout, 0, _IONBF, 0) ;
@@ -232,6 +331,9 @@ int task_create (task_t *task,			// descritor da nova tarefa
     task->stack = malloc(STACKSIZE) ;
     task_setprio(task, 0);
     task->is_user_task = 1;
+    task->status = TASK_RUNNING;
+    task->exit_code = DEFAULT_EXIT_CODE;
+    task->waited_task = NULL;
 
     task->creation_time = systime(); //cria com a data atual
     task->activations = 0; //numero de vezes que foi ativa
@@ -260,8 +362,8 @@ int task_create (task_t *task,			// descritor da nova tarefa
         #ifdef DEBUG
             printf("[Task Create] Adicionando a tarefa %d na fila de tarefas ativas\n", last_task_id);
         #endif
-        userTasks++;
         queue_append((queue_t**) dispatcher_active_tasks, (queue_t*) task);
+        active_tasks++;
     }
 
     return task->id;   
@@ -272,16 +374,23 @@ void task_exit (int exitCode)
 {
     print_current_task_runtime();
 
-    if (userTasks > 0 ) {
-        to_be_next_task = current_task->next; //salva a proxima tarefa
+    task_t *self = current_task;
+    self->status = TASK_DEAD;
+    self->exit_code = exitCode;
 
-        queue_remove((queue_t**) dispatcher_active_tasks, (queue_t*) current_task); //remove da lista de tarefas
-        userTasks -= 1; 
-        //task_destroy(current_task);
+    if (active_tasks > 0 ) {
+        to_be_next_task = self->next; //salva a proxima tarefa
+
+        queue_remove((queue_t**) dispatcher_active_tasks, (queue_t*) self); //remove da lista de tarefas
+        active_tasks -= 1; 
+        //task_destroy(self);
 
         #ifdef DEBUG
-            printf("[Task Exit] A tarefa %d já está fora da fila de tarefas\n", current_task->id);
+            printf("[Task Exit] A tarefa %d já está fora da fila de tarefas\n", self->id);
         #endif
+
+        //Todo: acordar as outras tarefas
+        check_suspended_tasks(self);
 
         current_task = NULL; // seta tarefa atual como nula, assim não tenta atribuir contexto pra task que não existe
 
