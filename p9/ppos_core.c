@@ -6,6 +6,8 @@
 #include "ppos.h"
 #include "queue.h"
 
+#define _XOPEN_SOURCE 600	/* para compilar no MacOS */
+
 #define STACKSIZE 32768
 #define MIN_PRIORITY -20
 #define MAX_PRIORITY 20
