@@ -34,6 +34,7 @@ typedef struct task_t
 // estrutura que define um semáforo
 typedef struct
 {
+  int id;
   int counter;
   task_t **suspended_tasks;
   int task_counter;

@@ -17,40 +17,40 @@ main: 1
                 Pong: 1
                     Pung: 1
 main: esperando Pang...
-                Pong: 2
-                    Pung: 2
     Pang: 2
         Peng: 2
             Ping: 2
-                Pong: 3
+                Pong: 2
+                    Pung: 2
     Pang: 3
         Peng: 3
             Ping: 3
+                Pong: 3
                     Pung: 3
     Pang: fim
-Task 2 exit: execution time 22139 ms, processor time 4031 ms, 202 activations
+Task 2 exit: execution time 21258 ms, processor time 3869 ms, 194 activations
         Peng: 4
             Ping: 4
                 Pong: 4
                     Pung: 4
 main: Pang acabou com exit code 2
 main: esperando Peng...
+        Peng: 5
             Ping: 5
                 Pong: 5
                     Pung: 5
-        Peng: 5
+        Peng: fim
+Task 3 exit: execution time 28943 ms, processor time 5785 ms, 290 activations
             Ping: 6
                 Pong: 6
                     Pung: 6
-        Peng: fim
-Task 3 exit: execution time 30061 ms, processor time 6002 ms, 301 activations
 main: Peng acabou com exit code 3
 main: esperando Ping...
             Ping: 7
                 Pong: 7
                     Pung: 7
             Ping: fim
-Task 4 exit: execution time 35834 ms, processor time 7933 ms, 397 activations
+Task 4 exit: execution time 34601 ms, processor time 7678 ms, 384 activations
                 Pong: 8
                     Pung: 8
 main: Ping acabou com exit code 4
@@ -58,14 +58,14 @@ main: esperando Pong...
                 Pong: 9
                     Pung: 9
                 Pong: fim
-Task 5 exit: execution time 39767 ms, processor time 9892 ms, 495 activations
+Task 5 exit: execution time 38481 ms, processor time 9600 ms, 481 activations
                     Pung: 10
 main: Pong acabou com exit code 5
 main: esperando Pung...
                     Pung: 11
                     Pung: fim
-Task 6 exit: execution time 41743 ms, processor time 11856 ms, 593 activations
+Task 6 exit: execution time 40448 ms, processor time 11567 ms, 579 activations
 main: Pung acabou com exit code 6
 main: fim
-Task 0 exit: execution time 41743 ms, processor time 2120 ms, 107 activations
-Task 1 exit: execution time 41743 ms, processor time 0 ms, 2095 activations
+Task 0 exit: execution time 40448 ms, processor time 2040 ms, 103 activations
+Task 1 exit: execution time 40448 ms, processor time 0 ms, 2031 activations

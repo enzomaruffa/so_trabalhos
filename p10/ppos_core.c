@@ -20,6 +20,7 @@
 #define DEFAULT_EXIT_CODE 0
 
 int last_task_id = 0;
+int last_semaphore_id = -1;
 
 int can_preempt = 1;
 
@@ -47,43 +48,61 @@ struct itimerval timer;
 
 // cria um semaforo
 int sem_create (semaphore_t *s, int value) {
+    last_semaphore_id++;
+    s->id = last_semaphore_id;
+
     #ifdef DEBUG 
-        printf("Creating semaphore with value %d", value);
+        printf("[Semaphore Create] Criando semáforo %d com valor %d\n", s-> id, value);
     #endif
+
     s->task_counter = 0;
     s->counter = value;
     s->suspended_tasks = (task_t **)malloc(sizeof(task_t *));
+    *(s->suspended_tasks) = NULL;
     return 0;
 }
 
 // requisita o semáforo
 int sem_down (semaphore_t *s) {
     can_preempt = 0;
+    #ifdef DEBUG
+        printf("[Semaphore Down] iniciando no semáforo %d\n", s->id);
+    #endif
 
     s->counter -= 1;
-    if (s->counter < 0) {
+
+    if (s->counter) {
+        #ifdef DEBUG
+            printf("[Semaphore Down] removendo a tarefa de id %d na lista de tarefas ativas\n", current_task->id);
+        #endif
         queue_remove((queue_t**) dispatcher_active_tasks, (queue_t*) current_task); //remove da lista de tarefas
         active_tasks -= 1; 
 
-        queue_append((queue_t**) s->suspended_tasks, (queue_t*) current_task);
+        #ifdef DEBUG
+            printf("[Semaphore Down] adicionando a tarefa de id %d na lista de tarefas do semáforo\n", current_task->id);
+        #endif
+        
         s->task_counter += 1;
+        queue_append((queue_t**) s->suspended_tasks, (queue_t*) current_task);
+
+        current_task->status = TASK_SUSPENDED;
 
         task_yield();
     }
+    return 0;
 }
 
 void sem_wake_up_first(semaphore_t *s) {
     task_t * task = *(s->suspended_tasks);
 
     #ifdef DEBUG
-        printf("[Sem Wake Up First] removendo a tarefa de id %d das lista de tarefas do semaforo\n", task->id);
+        printf("[Semaphore Wake Up First] removendo a tarefa de id %d das lista de tarefas do semaforo\n", task->id);
     #endif
     queue_remove((queue_t**) s->suspended_tasks, (queue_t*) task); //remove da lista de tarefas
-    s->task_counter -= 1;
 
     //adicionar na lista de ativas
     #ifdef DEBUG
-        printf("[Sem Wake Up First] adicionando a tarefa de id %d na lista de tarefas ativas\n", task->id);
+        printf("[Semaphore Wake Up First] adicionando a tarefa de id %d na lista de tarefas ativas\n", task->id);
     #endif
     queue_append((queue_t**) dispatcher_active_tasks, (queue_t*) task);
     active_tasks += 1;
@@ -94,10 +113,22 @@ void sem_wake_up_first(semaphore_t *s) {
 // libera o semáforo
 int sem_up (semaphore_t *s) {
     can_preempt = 0;
+
+    #ifdef DEBUG
+        printf("[Semaphore Up] iniciando no semáforo %d\n", s->id);
+    #endif
+
+    s->counter += 1;
+
     if (s->counter <= 0) {
+        #ifdef DEBUG
+            printf("[Semaphore Up] acordando primeira tarefa\n");
+        #endif
+        s->task_counter -= 1;
         sem_wake_up_first(s);
     }
     can_preempt = 1;
+    return 0;
 }
 
 
