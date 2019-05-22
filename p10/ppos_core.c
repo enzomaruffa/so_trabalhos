@@ -66,11 +66,12 @@ int sem_create (semaphore_t *s, int value) {
 int sem_down (semaphore_t *s) {
     can_preempt = 0;
     #ifdef DEBUG
-        printf("[Semaphore Down] iniciando no semáforo %d\n", s->id);
+        printf("[Semaphore Down] tarefa %d iniciando no semáforo %d\n", current_task->id, s->id);
     #endif
 
     s->counter -= 1;
 
+    printf("[Semaphore Down] Semaforo tem %d vagas e %d pessoas na fila\n", s->counter, s->task_counter);
     if (s->counter) {
         #ifdef DEBUG
             printf("[Semaphore Down] removendo a tarefa de id %d na lista de tarefas ativas\n", current_task->id);
@@ -115,11 +116,11 @@ int sem_up (semaphore_t *s) {
     can_preempt = 0;
 
     #ifdef DEBUG
-        printf("[Semaphore Up] iniciando no semáforo %d\n", s->id);
+        printf("[Semaphore Up] tarefa %d iniciando no semáforo %d\n", current_task->id, s->id);
     #endif
 
     s->counter += 1;
-
+    printf("[Semaphore Up] Semaforo tem %d vagas e %d pessoas na fila\n", s->counter, s->task_counter);
     if (s->counter <= 0) {
         #ifdef DEBUG
             printf("[Semaphore Up] acordando primeira tarefa\n");
