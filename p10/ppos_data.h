@@ -20,6 +20,7 @@ typedef struct task_t
    int prio;
    int dynamic_prio;
    int is_user_task;
+   unsigned long int total_ticks;
    int ticks;
    int creation_time;
    int activations;

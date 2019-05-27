@@ -22,6 +22,7 @@
 int last_task_id = 0;
 int last_semaphore_id = -1;
 
+
 int can_preempt = 1;
 
 task_t *main_task;
@@ -64,15 +65,22 @@ int sem_create (semaphore_t *s, int value) {
 
 // requisita o semáforo
 int sem_down (semaphore_t *s) {
+    if (current_task->ticks < 0) {
+        task_yield();
+    }
+
+    #ifdef DEBUG
+        printf("[Semaphore Down] desabilitando preempção em %d\n", current_task->id);
+    #endif
     can_preempt = 0;
     #ifdef DEBUG
         printf("[Semaphore Down] tarefa %d iniciando no semáforo %d\n", current_task->id, s->id);
+        printf("[Semaphore Down] semaforo tem %d vagas e %d pessoas na fila\n", s->counter, s->task_counter);
     #endif
 
     s->counter -= 1;
 
-    printf("[Semaphore Down] Semaforo tem %d vagas e %d pessoas na fila\n", s->counter, s->task_counter);
-    if (s->counter) {
+    if (s->counter < 0) {
         #ifdef DEBUG
             printf("[Semaphore Down] removendo a tarefa de id %d na lista de tarefas ativas\n", current_task->id);
         #endif
@@ -88,8 +96,17 @@ int sem_down (semaphore_t *s) {
 
         current_task->status = TASK_SUSPENDED;
 
+        #ifdef DEBUG
+            printf("[Semaphore Down] Reabilitando preempção em %d\n", current_task->id);
+        #endif
+        can_preempt = 1;
         task_yield();
     }
+
+    #ifdef DEBUG
+        printf("[Semaphore Down] Reabilitando preempção em %d\n", current_task->id);
+    #endif
+    can_preempt = 1;
     return 0;
 }
 
@@ -114,14 +131,14 @@ void sem_wake_up_first(semaphore_t *s) {
 // libera o semáforo
 int sem_up (semaphore_t *s) {
     can_preempt = 0;
+    s->counter += 1;
 
     #ifdef DEBUG
         printf("[Semaphore Up] tarefa %d iniciando no semáforo %d\n", current_task->id, s->id);
+        printf("[Semaphore Up] semaforo tem %d vagas e %d pessoas na fila\n", s->counter, s->task_counter);
     #endif
 
-    s->counter += 1;
-    printf("[Semaphore Up] Semaforo tem %d vagas e %d pessoas na fila\n", s->counter, s->task_counter);
-    if (s->counter <= 0) {
+    if (s->task_counter > 0) {
         #ifdef DEBUG
             printf("[Semaphore Up] acordando primeira tarefa\n");
         #endif
@@ -346,7 +363,7 @@ void print_current_task_runtime() {
     //subtrai 1 de activations pois a activation só é completa se todos os ticks forem zerados.
     // um exemplo disso é uma tarefa que executa antes da primeira ativação acabar. se não excluirmos 
     // esse primeiro caso, ela acabaria com QUANTUM + tempo de fato utilizado, sendo irreal
-    unsigned int processor_time = (current_task->activations-1)*QUANTUM + (QUANTUM - current_task->ticks);
+    unsigned long int processor_time = current_task->total_ticks;
 
     // se a tarefa for o dispatcher, seta o tempo de processador como 0
 
@@ -361,8 +378,19 @@ void tick_handler() {
         return;
     }
     current_task->ticks--;
+    current_task->total_ticks += 1;
+
+    #ifdef DEBUG
+        printf("[Tick Handler] can_preempt = %d, current_task->ticks = %d\n", can_preempt, current_task->ticks);
+    #endif
     if (can_preempt) {
+        #ifdef DEBUG
+            printf("[Tick Handler] possibly preempting! \n");
+        #endif
         if (current_task->ticks <= 0) {
+            #ifdef DEBUG
+                printf("[Tick Handler] yielding! \n");
+            #endif
             task_yield();
         }
     }
@@ -412,7 +440,6 @@ task_t *scheduler()
     }
 
     task_setprio(priority_task, priority_task->prio);
-
     return priority_task;
 }
 
@@ -426,7 +453,7 @@ void dispatcher_body () // dispatcher é uma tarefa
 
         if (active_tasks > 0) {  // pode ter tarefas dormentes
             next = NULL;
-            next = scheduler() ;  // scheduler é uma função
+            next = scheduler() ;  // scheduler é uma função 
         
             if (to_be_next_task) 
                 to_be_next_task = NULL;
@@ -435,7 +462,8 @@ void dispatcher_body () // dispatcher é uma tarefa
             {
                 //... // ações antes de lançar a tarefa "next", se houverem
                 next->ticks = QUANTUM;
-                next->activations += 1;
+                next->activations += 1; 
+                next->total_ticks += 1; //consideramos pelo menos 1ms por ativação
 
                 #ifdef DEBUG
                     printf("[Dispatcher] Tarefa %d está com %d ativacões\n", next->id, next->activations);
@@ -568,6 +596,7 @@ int task_create (task_t *task,			// descritor da nova tarefa
     task->stack = malloc(STACKSIZE) ;
     task_setprio(task, 0);
     task->is_user_task = 1;
+    task->total_ticks = 0;
     task->status = TASK_RUNNING;
     task->exit_code = DEFAULT_EXIT_CODE;
     task->waited_task = NULL;
@@ -645,9 +674,6 @@ void task_exit (int exitCode)
 // Tarefa solta o processador
 void task_yield () 
 {
-    if (can_preempt == 0)
-        can_preempt = 1;
-
     task_switch(dispatcher_task);
 }
 
