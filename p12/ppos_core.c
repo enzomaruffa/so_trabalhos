@@ -3,6 +3,7 @@
 #include <ucontext.h>
 #include <signal.h>
 #include <sys/time.h>
+#include <strings.h>
 #include "ppos.h"
 #include "queue.h"
 
@@ -21,6 +22,7 @@
 
 int last_task_id = 0;
 int last_semaphore_id = -1;
+int last_mqueue_id = -1;
 
 
 int can_preempt = 1;
@@ -44,6 +46,86 @@ struct sigaction action ;
 
 // estrutura de inicialização to timer
 struct itimerval timer;
+
+
+// ========================== P12 ============================== 
+
+
+
+// cria uma fila para até max mensagens de size bytes cada
+int mqueue_create (mqueue_t *queue, int max, int size) {
+
+    #ifdef DEBUG
+        printf("[Mqueue Create] Criando fila de mensagens com %d espaços de %d bytes\n", max, size);
+    #endif
+
+    queue = malloc(sizeof(mqueue_t));
+
+    if (!(queue)) {
+        return 1;
+    }
+    
+    last_mqueue_id += 1;
+    queue->id = last_mqueue_id;
+    
+    queue->buffer = malloc(max * size);
+    queue->max_msgs = max;
+    queue->msg_size = size;
+    queue->current_item = queue->buffer;
+    queue->next_position = queue->buffer;
+    queue->current_itens = 0;
+
+    return 0;
+}
+
+// envia uma mensagem para a fila
+int mqueue_send (mqueue_t *queue, void *msg) {
+    if (queue->current_itens == queue->max_msgs) {
+        // bloquear chamada
+    }
+
+    bcopy(msg, queue->next_position, queue->msg_size);
+    
+    queue->current_itens += 1;
+
+    if (queue->next_position + 1 == queue->buffer + queue->max_msgs) { //ou seja, estouraria o buffer
+        queue->next_position = queue->buffer;
+    } else {
+        queue->next_position += 1;
+    }
+
+    return 0;
+}
+
+// recebe uma mensagem da fila
+int mqueue_recv (mqueue_t *queue, void *msg) {
+    if (queue->current_itens == 0) {
+        // bloquear chamada
+    }
+
+    bcopy(queue->current_item, msg, queue->msg_size);
+    
+    queue->current_itens -= 1;
+
+    if (queue->current_item + 1 == queue->buffer + queue->max_msgs) { //ou seja, estouraria o buffer
+        queue->current_item = queue->buffer;
+    } else {
+        queue->current_item += 1;
+    }
+
+    return 0;
+
+}
+
+// destroi a fila, liberando as tarefas bloqueadas
+int mqueue_destroy (mqueue_t *queue) {
+
+}
+
+// informa o número de mensagens atualmente na fila
+int mqueue_msgs (mqueue_t *queue) {
+    return queue->current_itens;
+}
 
 // ========================== P10 ============================== 
 
