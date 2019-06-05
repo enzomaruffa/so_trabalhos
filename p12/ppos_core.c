@@ -59,8 +59,6 @@ int mqueue_create (mqueue_t *queue, int max, int size) {
         printf("[Mqueue Create] Criando fila de mensagens com ID %d, %d espaços de %d bytes\n", last_mqueue_id+1, max, size);
     #endif
 
-    queue = malloc(sizeof(mqueue_t));
-
     if (!(queue)) {
         return 1;
     }
@@ -90,8 +88,14 @@ int mqueue_send (mqueue_t *queue, void *msg) {
         printf("[Mqueue Send] Enviando mensagem para a fila de mensagens com ID %d com %d espaços\n", queue->id, queue->max_msgs);
     #endif
 
+    #ifdef DEBUG
+        printf("[Mqueue Send] Down no semáforo de vagas\n");
+    #endif
     sem_down(queue->s_empty_lots);
 
+    #ifdef DEBUG
+        printf("[Mqueue Send] Down no semáforo do buffer\n");
+    #endif
     sem_down(queue->buffer);
 
     bcopy(msg, queue->next_position, queue->msg_size);
@@ -102,8 +106,14 @@ int mqueue_send (mqueue_t *queue, void *msg) {
         queue->next_position += 1;
     }
 
+    #ifdef DEBUG
+        printf("[Mqueue Send] Up no semáforo do buffer\n");
+    #endif
     sem_up(queue->s_buffer);
 
+    #ifdef DEBUG
+        printf("[Mqueue Send] Up no semáforo de itens\n");
+    #endif
     sem_up(queue->s_items);
 
     return 0;
@@ -114,11 +124,15 @@ int mqueue_recv (mqueue_t *queue, void *msg) {
     #ifdef DEBUG
         printf("[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID %d com %d espaços\n", queue->id, queue->max_msgs);
     #endif
-    printf("%p", queue);
-    printf("%p", queue->s_items);
 
+    #ifdef DEBUG
+        printf("[Mqueue Recv] Down no semáforo de itens\n");
+    #endif
     sem_down(queue->s_items);
 
+    #ifdef DEBUG
+        printf("[Mqueue Recv] Down no semáforo do buffer\n");
+    #endif
     sem_down(queue->buffer);
 
     bcopy(queue->current_item, msg, queue->msg_size);
@@ -129,8 +143,14 @@ int mqueue_recv (mqueue_t *queue, void *msg) {
         queue->current_item += 1;
     }
 
+    #ifdef DEBUG
+        printf("[Mqueue Recv] Up no semáforo do buffer\n");
+    #endif
     sem_up(queue->s_buffer);
 
+    #ifdef DEBUG
+        printf("[Mqueue Recv] Up no semáforo de vagas\n");
+    #endif
     sem_up(queue->s_empty_lots);
 
     return 0;
@@ -200,7 +220,6 @@ int sem_down (semaphore_t *s) {
         
         s->task_counter += 1;
         queue_append((queue_t**) s->suspended_tasks, (queue_t*) current_task);
-
         current_task->status = TASK_SUSPENDED;
 
         #ifdef DEBUG

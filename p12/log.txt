@@ -1,0 +1,153 @@
+main: inicio
+[Create Dispatcher] Criando tarefa do dispatcher
+[Task Create] Criando a tarefa 0
+[Task Create] Criando o contexto da tarefa 0
+[Create Dispatcher] Criando a lista de tarefas ativas do dispatcher
+[Create Dispatcher] Criando a lista de tarefas suspensas do dispatcher
+[Create Dispatcher] Criando a lista de tarefas dormentes do dispatcher
+[PPOS INIT] Criando a main_task
+[Task Create] Criando a tarefa 1
+[Task Create] Adicionando a tarefa 2 na fila de tarefas ativas
+[PPOS INIT] Main_task com 0 ativacôes
+[PPOS INIT] Trocando o fluxo para dispatcher
+[Dispatcher] Tarefa 0 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 0
+[Mqueue Create] Criando fila de mensagens com ID 0, 5 espaços de 4 bytes
+[Semaphore Create] Criando semáforo 0 com valor 5
+[Semaphore Create] Criando semáforo 1 com valor 1
+[Semaphore Create] Criando semáforo 2 com valor 0
+[Mqueue Create] Criando fila de mensagens com ID 1, 5 espaços de 8 bytes
+[Semaphore Create] Criando semáforo 3 com valor 5
+[Semaphore Create] Criando semáforo 4 com valor 1
+[Semaphore Create] Criando semáforo 5 com valor 0
+[Task Create] Criando a tarefa 2
+[Task Create] Criando o contexto da tarefa 2
+[Task Create] Adicionando a tarefa 3 na fila de tarefas ativas
+[Task Create] Criando a tarefa 3
+[Task Create] Criando o contexto da tarefa 3
+[Task Create] Adicionando a tarefa 4 na fila de tarefas ativas
+[Task Create] Criando a tarefa 4
+[Task Create] Criando o contexto da tarefa 4
+[Task Create] Adicionando a tarefa 5 na fila de tarefas ativas
+[Task Create] Criando a tarefa 5
+[Task Create] Criando o contexto da tarefa 5
+[Task Create] Adicionando a tarefa 6 na fila de tarefas ativas
+[Task Create] Criando a tarefa 6
+[Task Create] Criando o contexto da tarefa 6
+[Task Create] Adicionando a tarefa 7 na fila de tarefas ativas
+[Task Create] Criando a tarefa 7
+[Task Create] Criando o contexto da tarefa 7
+[Task Create] Adicionando a tarefa 8 na fila de tarefas ativas
+[Task Join] removendo a tarefa de id 0 da lista de tarefas ativas
+[Task Join] adicionando a tarefa de id 0 na lista de tarefas suspensas
+[Dispatcher] Tarefa 2 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 0 vagas e 0 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 2 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 2 na lista de tarefas do semáforo
+dasdas[Semaphore Down] Reabilitando preempção em 2
+[Dispatcher] Tarefa 3 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 3
+[Semaphore Down] tarefa 3 iniciando no semáforo 5
+[Semaphore Down] semaforo tem 0 vagas e 0 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 3 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 3 na lista de tarefas do semáforo
+dasdas[Semaphore Down] Reabilitando preempção em 3
+[Dispatcher] Tarefa 4 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 4
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 4
+[Semaphore Down] tarefa 4 iniciando no semáforo 5
+[Semaphore Down] semaforo tem -1 vagas e 1 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 4 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 4 na lista de tarefas do semáforo
+dasdas[Semaphore Down] Reabilitando preempção em 4
+[Dispatcher] Tarefa 5 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 5
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 5
+[Semaphore Down] tarefa 5 iniciando no semáforo 0
+[Semaphore Down] semaforo tem 5 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 5
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 5
+[Semaphore Down] tarefa 5 iniciando no semáforo 1049174720
+[Semaphore Down] semaforo tem 32638 vagas e -260165040 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 5
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 2 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 5 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 0 vagas e 1 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 2 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 2 na lista de tarefas ativas
+T5 enviou 383
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 5 está indo dormir as 0 com nap_time de 886
+[Dispatcher] Tarefa 6 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 6
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 6
+[Semaphore Down] tarefa 6 iniciando no semáforo 0
+[Semaphore Down] semaforo tem 4 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 6
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 6
+[Semaphore Down] tarefa 6 iniciando no semáforo 383
+[Semaphore Down] semaforo tem 32637 vagas e -260165040 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 6
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 3 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 6 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 1 vagas e 0 pessoas na fila
+T6 enviou 777
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 6 está indo dormir as 1 com nap_time de 1915
+[Dispatcher] Tarefa 7 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 0
+[Semaphore Down] semaforo tem 3 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 199039
+[Semaphore Down] semaforo tem 32512 vagas e -260165040 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 4 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 7 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 2 vagas e 0 pessoas na fila
+T7 enviou 793
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 7 está indo dormir as 1 com nap_time de 2335
+[Dispatcher] Tarefa 2 está com 2 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 51972479
+[Semaphore Down] semaforo tem 0 vagas e -260165040 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 2 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 2 na lista de tarefas do semáforo
