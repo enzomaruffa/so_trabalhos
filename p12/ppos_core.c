@@ -96,7 +96,7 @@ int mqueue_send (mqueue_t *queue, void *msg) {
     #ifdef DEBUG
         printf("[Mqueue Send] Down no semáforo do buffer\n");
     #endif
-    sem_down(queue->buffer);
+    sem_down(queue->s_buffer);
 
     bcopy(msg, queue->next_position, queue->msg_size);
 
@@ -133,7 +133,7 @@ int mqueue_recv (mqueue_t *queue, void *msg) {
     #ifdef DEBUG
         printf("[Mqueue Recv] Down no semáforo do buffer\n");
     #endif
-    sem_down(queue->buffer);
+    sem_down(queue->s_buffer);
 
     bcopy(queue->current_item, msg, queue->msg_size);
 
@@ -233,7 +233,10 @@ int sem_down (semaphore_t *s) {
         printf("[Semaphore Down] Reabilitando preempção em %d\n", current_task->id);
     #endif
     can_preempt = 1;
-    return 0;
+
+    if (s->suspended_tasks) //se existe, o semáforo ainda é válido
+        return 0;
+    return 1;
 }
 
 void sem_wake_up_first(semaphore_t *s) {
@@ -278,9 +281,15 @@ int sem_up (semaphore_t *s) {
 
 // destroi o semáforo, liberando as tarefas bloqueadas
 int sem_destroy (semaphore_t *s) {
+    can_preempt = 0;
     if ((s->task_counter) > 0) {
-        //sem_wake_up_all(); 
+        for (int i=0; i < s->task_counter; i++)
+            sem_wake_up_first(s);
     }
+
+    free(s->suspended_tasks);
+
+    can_preempt = 1;
 
     return 0;
 }
