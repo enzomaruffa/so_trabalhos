@@ -475,7 +475,7 @@ void print_current_task_runtime() {
     // se a tarefa for o dispatcher, seta o tempo de processador como 0
 
     processor_time = current_task == dispatcher_task ? 0 : processor_time;
-    printf("Task %d exit: execution time %u ms, processor time %u ms, %d activations\n", current_task->id, execution_time, processor_time, current_task->activations);
+    printf("Task %d exit: execution time %u ms, processor time %lu ms, %d activations\n", current_task->id, execution_time, processor_time, current_task->activations);
 }
 
 // ========================== P5 ==============================
