@@ -56,7 +56,7 @@ struct itimerval timer;
 int mqueue_create (mqueue_t *queue, int max, int size) {
 
     #ifdef DEBUG
-        printf("[Mqueue Create] Criando fila de mensagens com %d espaços de %d bytes\n", max, size);
+        printf("[Mqueue Create] Criando fila de mensagens com ID %d, %d espaços de %d bytes\n", last_mqueue_id+1, max, size);
     #endif
 
     queue = malloc(sizeof(mqueue_t));
@@ -73,20 +73,28 @@ int mqueue_create (mqueue_t *queue, int max, int size) {
     queue->msg_size = size;
     queue->current_item = queue->buffer;
     queue->next_position = queue->buffer;
-    queue->current_itens = 0;
+
+    queue->s_empty_lots = malloc(sizeof(semaphore_t));
+    queue->s_buffer = malloc(sizeof(semaphore_t));
+    queue->s_items = malloc(sizeof(semaphore_t));
+    sem_create(queue->s_empty_lots, max);
+    sem_create(queue->s_buffer, 1);
+    sem_create(queue->s_items, 0);
 
     return 0;
 }
 
 // envia uma mensagem para a fila
 int mqueue_send (mqueue_t *queue, void *msg) {
-    if (queue->current_itens == queue->max_msgs) {
-        // bloquear chamada
-    }
+    #ifdef DEBUG
+        printf("[Mqueue Send] Enviando mensagem para a fila de mensagens com ID %d com %d espaços\n", queue->id, queue->max_msgs);
+    #endif
+
+    sem_down(queue->s_empty_lots);
+
+    sem_down(queue->buffer);
 
     bcopy(msg, queue->next_position, queue->msg_size);
-    
-    queue->current_itens += 1;
 
     if (queue->next_position + 1 == queue->buffer + queue->max_msgs) { //ou seja, estouraria o buffer
         queue->next_position = queue->buffer;
@@ -94,24 +102,36 @@ int mqueue_send (mqueue_t *queue, void *msg) {
         queue->next_position += 1;
     }
 
+    sem_up(queue->s_buffer);
+
+    sem_up(queue->s_items);
+
     return 0;
 }
 
 // recebe uma mensagem da fila
 int mqueue_recv (mqueue_t *queue, void *msg) {
-    if (queue->current_itens == 0) {
-        // bloquear chamada
-    }
+    #ifdef DEBUG
+        printf("[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID %d com %d espaços\n", queue->id, queue->max_msgs);
+    #endif
+    printf("%p", queue);
+    printf("%p", queue->s_items);
+
+    sem_down(queue->s_items);
+
+    sem_down(queue->buffer);
 
     bcopy(queue->current_item, msg, queue->msg_size);
-    
-    queue->current_itens -= 1;
 
     if (queue->current_item + 1 == queue->buffer + queue->max_msgs) { //ou seja, estouraria o buffer
         queue->current_item = queue->buffer;
     } else {
         queue->current_item += 1;
     }
+
+    sem_up(queue->s_buffer);
+
+    sem_up(queue->s_empty_lots);
 
     return 0;
 
@@ -120,11 +140,16 @@ int mqueue_recv (mqueue_t *queue, void *msg) {
 // destroi a fila, liberando as tarefas bloqueadas
 int mqueue_destroy (mqueue_t *queue) {
 
+    #ifdef DEBUG
+        printf("[Mqueue Destroy] Destruindo fila de mensagens\n");
+    #endif
+
+    return 0;
 }
 
 // informa o número de mensagens atualmente na fila
 int mqueue_msgs (mqueue_t *queue) {
-    return queue->current_itens;
+    return queue->s_items->counter;
 }
 
 // ========================== P10 ============================== 

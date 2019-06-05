@@ -60,9 +60,11 @@ typedef struct
   int id;
   int max_msgs;
   int msg_size;
-  int current_itens;
   void* current_item;
   void* next_position;
+  semaphore_t *s_items;
+  semaphore_t *s_empty_lots;
+  semaphore_t *s_buffer;
   void* buffer;
   // preencher quando necessário
 } mqueue_t ;
