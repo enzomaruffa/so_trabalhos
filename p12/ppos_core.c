@@ -91,32 +91,56 @@ int mqueue_send (mqueue_t *queue, void *msg) {
     #ifdef DEBUG
         printf("[Mqueue Send] Down no semáforo de vagas\n");
     #endif
-    sem_down(queue->s_empty_lots);
+    if (sem_down(queue->s_buffer) == -1) {
+        #ifdef DEBUG
+            perror("[ERRO] A fila não existe mais!\n");
+        #endif
+        return -1;
+    }
 
     #ifdef DEBUG
         printf("[Mqueue Send] Down no semáforo do buffer\n");
     #endif
-    sem_down(queue->s_buffer);
-    
-    bcopy(msg, queue->next_position, queue->msg_size);
+    if (sem_up(queue->s_buffer) == -1) {
+        #ifdef DEBUG
+            perror("[ERRO] A fila não existe mais!\n");
+        #endif
+        return -1;
+    }
 
-    if (queue->next_position + queue->msg_size == (queue->buffer + queue->max_msgs * queue->msg_size)) { //ou seja, estouraria o buffer
-        queue->next_position = queue->buffer;
-    } else {
-        queue->next_position += queue->msg_size;
+    if (queue->buffer) {
+        bcopy(msg, queue->next_position, queue->msg_size);
+
+        if (queue->next_position + queue->msg_size == (queue->buffer + queue->max_msgs * queue->msg_size)) { //ou seja, estouraria o buffer
+            queue->next_position = queue->buffer;
+        } else {
+            queue->next_position += queue->msg_size;
+        }
     }
 
     #ifdef DEBUG
         printf("[Mqueue Send] Up no semáforo do buffer\n");
     #endif
-    sem_up(queue->s_buffer);
+    if (sem_up(queue->s_buffer) == -1) {
+        #ifdef DEBUG
+            perror("[ERRO] A fila não existe mais!\n");
+        #endif
+        return -1;
+    }
 
     #ifdef DEBUG
         printf("[Mqueue Send] Up no semáforo de itens\n");
     #endif
-    sem_up(queue->s_items);
+    if (sem_up(queue->s_items) == -1) {
+        #ifdef DEBUG
+            perror("[ERRO] A fila não existe mais!\n");
+        #endif
+        return -1;
+    }
 
-    return 0;
+    if (queue->s_empty_lots) //Queue is still alive
+        return 0;
+    return -1;
 }
 
 // recebe uma mensagem da fila
@@ -128,32 +152,56 @@ int mqueue_recv (mqueue_t *queue, void *msg) {
     #ifdef DEBUG
         printf("[Mqueue Recv] Down no semáforo de itens\n");
     #endif
-    sem_down(queue->s_items);
+    if (sem_down(queue->s_items) == -1) {
+        #ifdef DEBUG
+            perror("[ERRO] A fila não existe mais!\n");
+        #endif
+        return -1;
+    }
 
     #ifdef DEBUG
         printf("[Mqueue Recv] Down no semáforo do buffer\n");
     #endif
-    sem_down(queue->s_buffer);
+    if (sem_down(queue->s_buffer) == -1) {
+        #ifdef DEBUG
+            perror("[ERRO] A fila não existe mais!\n");
+        #endif
+        return -1;
+    }
 
-    bcopy(queue->current_item, msg, queue->msg_size);
+    if (queue->buffer) {
+        bcopy(queue->current_item, msg, queue->msg_size);
 
-    if (queue->current_item + queue->msg_size == (queue->buffer + queue->max_msgs * queue->msg_size)) { //ou seja, estouraria o buffer
-        queue->current_item = queue->buffer;
-    } else {
-        queue->current_item += queue->msg_size;
+        if (queue->current_item + queue->msg_size == (queue->buffer + queue->max_msgs * queue->msg_size)) { //ou seja, estouraria o buffer
+            queue->current_item = queue->buffer;
+        } else {
+            queue->current_item += queue->msg_size;
+        }
     }
 
     #ifdef DEBUG
         printf("[Mqueue Recv] Up no semáforo do buffer\n");
     #endif
-    sem_up(queue->s_buffer);
+    if (sem_up(queue->s_buffer) == -1) {
+        #ifdef DEBUG
+            perror("[ERRO] A fila não existe mais!\n");
+        #endif
+        return -1;
+    }
 
     #ifdef DEBUG
         printf("[Mqueue Recv] Up no semáforo de vagas\n");
     #endif
-    sem_up(queue->s_empty_lots);
+    if (sem_up(queue->s_empty_lots) == -1) {
+        #ifdef DEBUG
+            perror("[ERRO] A fila não existe mais!\n");
+        #endif
+        return -1;
+    }
 
-    return 0;
+    if (queue->s_empty_lots) //Queue is still alive
+        return 0;
+    return -1;
 
 }
 
@@ -163,6 +211,27 @@ int mqueue_destroy (mqueue_t *queue) {
     #ifdef DEBUG
         printf("[Mqueue Destroy] Destruindo fila de mensagens\n");
     #endif
+
+    can_preempt = 0;
+
+    #ifdef DEBUG
+        printf("[Mqueue Destroy] Destruindo semáfotos\n");
+    #endif
+    sem_destroy(queue->s_buffer);
+    sem_destroy(queue->s_empty_lots);
+    sem_destroy(queue->s_items);
+
+    queue->s_buffer = NULL;
+    queue->s_empty_lots = NULL;
+    queue->s_items = NULL;
+
+    #ifdef DEBUG
+        printf("[Mqueue Destroy] Desalocando buffer\n");
+    #endif
+    free(queue->buffer);
+    queue->buffer = NULL;
+
+    can_preempt = 1;
 
     return 0;
 }
@@ -194,6 +263,13 @@ int sem_create (semaphore_t *s, int value) {
 int sem_down (semaphore_t *s) {
     if (current_task->ticks < 0) {
         task_yield();
+    }
+
+    if (!(s)) {
+        #ifdef DEBUG
+            perror("[ERRO] O semáforo não existe!\n");
+        #endif
+        return -1;
     }
 
     #ifdef DEBUG
@@ -259,6 +335,14 @@ void sem_wake_up_first(semaphore_t *s) {
 
 // libera o semáforo
 int sem_up (semaphore_t *s) {
+
+    if (!(s)) {
+        #ifdef DEBUG
+            perror("[ERRO] O semáforo não existe!\n");
+        #endif
+        return -1;
+    }
+
     can_preempt = 0;
     s->counter += 1;
 
@@ -281,15 +365,18 @@ int sem_up (semaphore_t *s) {
 
 // destroi o semáforo, liberando as tarefas bloqueadas
 int sem_destroy (semaphore_t *s) {
+    int old_can_preempt = can_preempt; //preserva o estado da preempção
     can_preempt = 0;
+
     if ((s->task_counter) > 0) {
         for (int i=0; i < s->task_counter; i++)
             sem_wake_up_first(s);
     }
 
     free(s->suspended_tasks);
+    s->suspended_tasks = NULL;
 
-    can_preempt = 1;
+    can_preempt = old_can_preempt;
 
     return 0;
 }
