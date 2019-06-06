@@ -97,13 +97,13 @@ int mqueue_send (mqueue_t *queue, void *msg) {
         printf("[Mqueue Send] Down no semáforo do buffer\n");
     #endif
     sem_down(queue->s_buffer);
-
+    
     bcopy(msg, queue->next_position, queue->msg_size);
 
-    if (queue->next_position + 1 == queue->buffer + queue->max_msgs) { //ou seja, estouraria o buffer
+    if (queue->next_position + queue->msg_size == (queue->buffer + queue->max_msgs * queue->msg_size)) { //ou seja, estouraria o buffer
         queue->next_position = queue->buffer;
     } else {
-        queue->next_position += 1;
+        queue->next_position += queue->msg_size;
     }
 
     #ifdef DEBUG
@@ -137,10 +137,10 @@ int mqueue_recv (mqueue_t *queue, void *msg) {
 
     bcopy(queue->current_item, msg, queue->msg_size);
 
-    if (queue->current_item + 1 == queue->buffer + queue->max_msgs) { //ou seja, estouraria o buffer
+    if (queue->current_item + queue->msg_size == (queue->buffer + queue->max_msgs * queue->msg_size)) { //ou seja, estouraria o buffer
         queue->current_item = queue->buffer;
     } else {
-        queue->current_item += 1;
+        queue->current_item += queue->msg_size;
     }
 
     #ifdef DEBUG
