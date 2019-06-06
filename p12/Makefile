@@ -1,4 +1,4 @@
-#Dumbest makefile ever
+#Dumbest makefile ever!
 
 task = pingpong-mqueue.c
 

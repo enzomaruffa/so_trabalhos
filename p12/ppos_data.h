@@ -29,6 +29,7 @@ typedef struct task_t
    struct task_t *waited_task; //se suspensa, qual tarefa está esperando
    unsigned int slept_time; //momento que foi dormir
    unsigned int nap_time; //tempo que deve dormir
+   unsigned long total_nap_time; //tempo que deve dormir
    // ... (outros campos serão adicionados mais tarde)
 } task_t ;
 

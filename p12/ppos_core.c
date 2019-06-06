@@ -8,7 +8,6 @@
 #include "queue.h"
 
 #define STACKSIZE 32768
-#define _XOPEN_SOURCE 600	/* para compilar no MacOS */
 
 #define MIN_PRIORITY -20
 #define MAX_PRIORITY 20
@@ -405,6 +404,7 @@ void task_sleep (int t) {
     self->status = TASK_SLEEPING;
     self->slept_time = systime();
     self->nap_time = t;
+    self->total_nap_time += t;
 
     #ifdef DEBUG
         printf("[Task Sleep] a tarefa de id %d está indo dormir as %d com nap_time de %d\n", self->id, self->slept_time, self->nap_time);
@@ -590,12 +590,13 @@ void print_current_task_runtime() {
     // se a tarefa for o dispatcher, seta o tempo de processador como 0
 
     processor_time = current_task == dispatcher_task ? 0 : processor_time;
-    printf("Task %d exit: execution time %u ms, processor time %lu ms, %d activations\n", current_task->id, execution_time, processor_time, current_task->activations);
+    printf("Task %d exit: execution time %u ms, processor time %lu ms, %d activations, total slept time %lu ms\n", current_task->id, execution_time, processor_time, current_task->activations, current_task->total_nap_time);
 }
 
 // ========================== P5 ==============================
 void tick_handler() {
     current_time += 1;
+
     if (!current_task->is_user_task) {
         return;
     }
@@ -824,6 +825,7 @@ int task_create (task_t *task,			// descritor da nova tarefa
     task->waited_task = NULL;
     task->slept_time = -1;
     task->nap_time = -1;
+    task->total_nap_time = 0;
 
     task->creation_time = systime(); //cria com a data atual
     task->activations = 0; //numero de vezes que foi ativa
@@ -904,6 +906,10 @@ int task_switch (task_t *task)
 {
     previous_task = current_task;
     current_task = task;
+
+    #ifdef DEBUG
+        printf("[Task Switch] Trocando da tarefa %d para %d\n", current_task->id, task->id);
+    #endif
 
     if (previous_task)
         swapcontext (&(previous_task->context), &(task->context));

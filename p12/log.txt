@@ -1,26 +1,2261 @@
 main: inicio
+[Create Dispatcher] Criando tarefa do dispatcher
+[Task Create] Criando a tarefa 0
+[Task Create] Criando o contexto da tarefa 0
+[Create Dispatcher] Criando a lista de tarefas ativas do dispatcher
+[Create Dispatcher] Criando a lista de tarefas suspensas do dispatcher
+[Create Dispatcher] Criando a lista de tarefas dormentes do dispatcher
+[PPOS INIT] Criando a main_task
+[Task Create] Criando a tarefa 1
+[Task Create] Adicionando a tarefa 2 na fila de tarefas ativas
+[PPOS INIT] Main_task com 0 ativacôes
+[PPOS INIT] Trocando o fluxo para dispatcher
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 0 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 0
+[Task Switch] Trocando da tarefa 0 para 0
+[Mqueue Create] Criando fila de mensagens com ID 0, 5 espaços de 4 bytes
+[Semaphore Create] Criando semáforo 0 com valor 5
+[Semaphore Create] Criando semáforo 1 com valor 1
+[Semaphore Create] Criando semáforo 2 com valor 0
+[Mqueue Create] Criando fila de mensagens com ID 1, 5 espaços de 8 bytes
+[Semaphore Create] Criando semáforo 3 com valor 5
+[Semaphore Create] Criando semáforo 4 com valor 1
+[Semaphore Create] Criando semáforo 5 com valor 0
+[Task Create] Criando a tarefa 2
+[Task Create] Criando o contexto da tarefa 2
+[Task Create] Adicionando a tarefa 3 na fila de tarefas ativas
+[Task Create] Criando a tarefa 3
+[Task Create] Criando o contexto da tarefa 3
+[Task Create] Adicionando a tarefa 4 na fila de tarefas ativas
+[Task Create] Criando a tarefa 4
+[Task Create] Criando o contexto da tarefa 4
+[Task Create] Adicionando a tarefa 5 na fila de tarefas ativas
+[Task Create] Criando a tarefa 5
+[Task Create] Criando o contexto da tarefa 5
+[Task Create] Adicionando a tarefa 6 na fila de tarefas ativas
+[Task Create] Criando a tarefa 6
+[Task Create] Criando o contexto da tarefa 6
+[Task Create] Adicionando a tarefa 7 na fila de tarefas ativas
+[Task Create] Criando a tarefa 7
+[Task Create] Criando o contexto da tarefa 7
+[Task Create] Adicionando a tarefa 8 na fila de tarefas ativas
+[Task Join] removendo a tarefa de id 0 da lista de tarefas ativas
+[Task Join] adicionando a tarefa de id 0 na lista de tarefas suspensas
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 2 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 0 vagas e 0 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 2 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 2 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 2
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 3 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Task Switch] Trocando da tarefa 3 para 3
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 3
+[Semaphore Down] tarefa 3 iniciando no semáforo 5
+[Semaphore Down] semaforo tem 0 vagas e 0 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 3 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 3 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 3
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 4 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 4
+[Task Switch] Trocando da tarefa 4 para 4
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 4
+[Semaphore Down] tarefa 4 iniciando no semáforo 5
+[Semaphore Down] semaforo tem -1 vagas e 1 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 4 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 4 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 4
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 5 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 5
+[Task Switch] Trocando da tarefa 5 para 5
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 5
+[Semaphore Down] tarefa 5 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 1 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 5
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 1 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 2 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 5 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 0 vagas e 1 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 2 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 2 na lista de tarefas ativas
 T5 enviou 383
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 5 está indo dormir as 0 com nap_time de 886
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 6 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 6
+[Task Switch] Trocando da tarefa 6 para 6
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 6
+[Semaphore Down] tarefa 6 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 2 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 6
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 2 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 3 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 6 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 1 vagas e 0 pessoas na fila
 T6 enviou 777
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 6 está indo dormir as 0 com nap_time de 1915
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 7 está com 1 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Task Switch] Trocando da tarefa 7 para 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 3 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 3 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 4 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 7 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 2 vagas e 0 pessoas na fila
 T7 enviou 793
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 7 está indo dormir as 0 com nap_time de 2335
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 2 está com 2 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 4 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 4 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 6 vagas e 0 pessoas na fila
                T2: recebeu 383
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 2 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 4 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 4 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 7 vagas e 0 pessoas na fila
                T2: recebeu 777
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 1 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 4 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 4 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 8 vagas e 0 pessoas na fila
                T2: recebeu 793
                T2: 383+777+793 = 1953.000000 (raiz 44.192760)
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 1 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 1 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 2 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 2 iniciando no semáforo 5
+[Semaphore Up] semaforo tem -1 vagas e 2 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 3 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 3 na lista de tarefas ativas
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 2 está indo dormir as 0 com nap_time de 2386
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 3 está com 2 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Task Switch] Trocando da tarefa 3 para 3
+[Semaphore Down] Reabilitando preempção em 3
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 3
+[Semaphore Down] tarefa 3 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 2 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 3
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 3 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 2 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 3 iniciando no semáforo 3
+[Semaphore Up] semaforo tem 6 vagas e 0 pessoas na fila
                                  T3 consumiu 44.192760
+[Task Sleep] removendo a tarefa de id 3 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 3 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 3 está indo dormir as 0 com nap_time de 492
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 3 dormiu das 0 até as 492. Seu nap_time é de 492
+[Task Sleep] removendo a tarefa de id 3 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 3 na lista de tarefas ativas
+[Dispatcher] Tarefa 3 está com 3 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Task Switch] Trocando da tarefa 3 para 3
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 3
+[Semaphore Down] tarefa 3 iniciando no semáforo 5
+[Semaphore Down] semaforo tem -1 vagas e 1 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 3 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 3 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 3
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 5)
+[Task Sleep] a tarefa de id 5 dormiu das 0 até as 886. Seu nap_time é de 886
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas ativas
+[Dispatcher] Tarefa 5 está com 2 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 5
+[Task Switch] Trocando da tarefa 5 para 5
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 5
+[Semaphore Down] tarefa 5 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 4 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 5
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 4 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 5 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 5 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 1 vagas e 0 pessoas na fila
 T5 enviou 649
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 5 está indo dormir as 886 com nap_time de 421
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 5 dormiu das 886 até as 1307. Seu nap_time é de 421
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas ativas
+[Dispatcher] Tarefa 5 está com 3 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 5
+[Task Switch] Trocando da tarefa 5 para 5
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 5
+[Semaphore Down] tarefa 5 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 5 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 5
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 5 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 6 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 5 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 2 vagas e 0 pessoas na fila
 T5 enviou 362
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 5 está indo dormir as 1307 com nap_time de 1027
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 6)
+[Task Sleep] a tarefa de id 6 dormiu das 0 até as 1915. Seu nap_time é de 1915
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas ativas
+[Dispatcher] Tarefa 6 está com 2 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 6
+[Task Switch] Trocando da tarefa 6 para 6
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 6
+[Semaphore Down] tarefa 6 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 6 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 6
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 6 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 7 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 6 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 3 vagas e 0 pessoas na fila
 T6 enviou 690
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 6 está indo dormir as 1915 com nap_time de 2059
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 5 dormiu das 1307 até as 2334. Seu nap_time é de 1027
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas ativas
+[Dispatcher] Tarefa 5 está com 4 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 5
+[Task Switch] Trocando da tarefa 5 para 5
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 5
+[Semaphore Down] tarefa 5 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 7 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 5
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 7 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 8 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 5 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 4 vagas e 0 pessoas na fila
 T5 enviou 763
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 5 está indo dormir as 2334 com nap_time de 2926
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 7)
+[Task Sleep] a tarefa de id 7 dormiu das 0 até as 2335. Seu nap_time é de 2335
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas ativas
+[Dispatcher] Tarefa 7 está com 2 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Task Switch] Trocando da tarefa 7 para 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 8 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 8 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 9 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 7 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 5 vagas e 0 pessoas na fila
 T7 enviou 540
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 7 está indo dormir as 2335 com nap_time de 426
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 2)
+[Task Sleep] a tarefa de id 2 dormiu das 0 até as 2386. Seu nap_time é de 2386
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas ativas
+[Dispatcher] Tarefa 2 está com 3 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 5 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 9 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 9 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 9 vagas e 0 pessoas na fila
                T2: recebeu 649
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 4 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 9 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 9 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 10 vagas e 0 pessoas na fila
                T2: recebeu 362
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 3 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 9 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 9 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 11 vagas e 0 pessoas na fila
                T2: recebeu 690
                T2: 649+362+690 = 1701.000000 (raiz 41.243181)
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 2 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 2 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 3 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 2 iniciando no semáforo 5
+[Semaphore Up] semaforo tem -1 vagas e 2 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 4 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 4 na lista de tarefas ativas
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 2 está indo dormir as 2386 com nap_time de 172
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 4 está com 2 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 4
+[Task Switch] Trocando da tarefa 4 para 4
+[Semaphore Down] Reabilitando preempção em 4
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 4
+[Semaphore Down] tarefa 4 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 3 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 4
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 4 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 3 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 4 iniciando no semáforo 3
+[Semaphore Up] semaforo tem 7 vagas e 0 pessoas na fila
                                  T4 consumiu 41.243181
+[Task Sleep] removendo a tarefa de id 4 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 4 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 4 está indo dormir as 2386 com nap_time de 736
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 2 dormiu das 2386 até as 2558. Seu nap_time é de 172
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas ativas
+[Dispatcher] Tarefa 2 está com 4 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 2 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 9 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 9 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 12 vagas e 0 pessoas na fila
                T2: recebeu 763
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 1 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 9 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 9 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 13 vagas e 0 pessoas na fila
                T2: recebeu 540
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 0 vagas e 0 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 2 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 2 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 2
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 7 dormiu das 2335 até as 2761. Seu nap_time é de 426
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas ativas
+[Dispatcher] Tarefa 7 está com 3 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Task Switch] Trocando da tarefa 7 para 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 9 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 9 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 10 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 7 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 0 vagas e 1 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 2 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 2 na lista de tarefas ativas
 T7 enviou 211
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 7 está indo dormir as 2761 com nap_time de 368
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 2 está com 5 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 10 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 10 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 14 vagas e 0 pessoas na fila
                T2: recebeu 211
                T2: 763+540+211 = 1514.000000 (raiz 38.910153)
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 3 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 3 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 4 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 2 iniciando no semáforo 5
+[Semaphore Up] semaforo tem 0 vagas e 1 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 3 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 3 na lista de tarefas ativas
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 2 está indo dormir as 2761 com nap_time de 567
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 3 está com 4 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Task Switch] Trocando da tarefa 3 para 3
+[Semaphore Down] Reabilitando preempção em 3
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 3
+[Semaphore Down] tarefa 3 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 4 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 3
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 3 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 4 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 3 iniciando no semáforo 3
+[Semaphore Up] semaforo tem 8 vagas e 0 pessoas na fila
                                  T3 consumiu 38.910153
+[Task Sleep] removendo a tarefa de id 3 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 3 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 3 está indo dormir as 2761 com nap_time de 429
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 4 dormiu das 2386 até as 3122. Seu nap_time é de 736
+[Task Sleep] removendo a tarefa de id 4 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 4 na lista de tarefas ativas
+[Dispatcher] Tarefa 4 está com 3 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 4
+[Task Switch] Trocando da tarefa 4 para 4
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 4
+[Semaphore Down] tarefa 4 iniciando no semáforo 5
+[Semaphore Down] semaforo tem 0 vagas e 0 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 4 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 4 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 4
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 7 dormiu das 2761 até as 3129. Seu nap_time é de 368
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas ativas
+[Dispatcher] Tarefa 7 está com 4 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Task Switch] Trocando da tarefa 7 para 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 10 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 10 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 11 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 7 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 1 vagas e 0 pessoas na fila
 T7 enviou 782
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 7 está indo dormir as 3129 com nap_time de 530
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 3 dormiu das 2761 até as 3190. Seu nap_time é de 429
+[Task Sleep] removendo a tarefa de id 3 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 3 na lista de tarefas ativas
+[Dispatcher] Tarefa 3 está com 5 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Task Switch] Trocando da tarefa 3 para 3
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 3
+[Semaphore Down] tarefa 3 iniciando no semáforo 5
+[Semaphore Down] semaforo tem -1 vagas e 1 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 3 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 3 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 3
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 2 dormiu das 2761 até as 3328. Seu nap_time é de 567
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas ativas
+[Dispatcher] Tarefa 2 está com 6 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 1 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 11 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 11 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 15 vagas e 0 pessoas na fila
+               T2: recebeu 782
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 0 vagas e 0 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 2 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 2 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 2
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 7 dormiu das 3129 até as 3659. Seu nap_time é de 530
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas ativas
+[Dispatcher] Tarefa 7 está com 5 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Task Switch] Trocando da tarefa 7 para 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 11 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 11 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 12 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 7 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 0 vagas e 1 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 2 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 2 na lista de tarefas ativas
+T7 enviou 862
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 7 está indo dormir as 3659 com nap_time de 1123
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 2 está com 7 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 12 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 12 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 16 vagas e 0 pessoas na fila
+               T2: recebeu 862
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 0 vagas e 0 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 2 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 2 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 2
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 6)
+[Task Sleep] a tarefa de id 6 dormiu das 1915 até as 3974. Seu nap_time é de 2059
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas ativas
+[Dispatcher] Tarefa 6 está com 3 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 6
+[Task Switch] Trocando da tarefa 6 para 6
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 6
+[Semaphore Down] tarefa 6 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 12 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 6
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 12 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 13 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 6 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 0 vagas e 1 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 2 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 2 na lista de tarefas ativas
+T6 enviou 67
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 6 está indo dormir as 3974 com nap_time de 1135
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 2 está com 8 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 13 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 13 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 17 vagas e 0 pessoas na fila
+               T2: recebeu 67
+               T2: 782+862+67 = 1711.000000 (raiz 41.364236)
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 4 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 4 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 5 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 2 iniciando no semáforo 5
+[Semaphore Up] semaforo tem -1 vagas e 2 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 4 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 4 na lista de tarefas ativas
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 2 está indo dormir as 3974 com nap_time de 929
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 4 está com 4 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 4
+[Task Switch] Trocando da tarefa 4 para 4
+[Semaphore Down] Reabilitando preempção em 4
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 4
+[Semaphore Down] tarefa 4 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 5 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 4
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 4 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 5 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 4 iniciando no semáforo 3
+[Semaphore Up] semaforo tem 9 vagas e 0 pessoas na fila
+                                 T4 consumiu 41.364236
+[Task Sleep] removendo a tarefa de id 4 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 4 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 4 está indo dormir as 3974 com nap_time de 2802
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 7 dormiu das 3659 até as 4782. Seu nap_time é de 1123
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas ativas
+[Dispatcher] Tarefa 7 está com 6 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Task Switch] Trocando da tarefa 7 para 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 13 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 13 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 14 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 7 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 1 vagas e 0 pessoas na fila
+T7 enviou 22
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 7 está indo dormir as 4782 com nap_time de 2058
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 2 dormiu das 3974 até as 4903. Seu nap_time é de 929
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas ativas
+[Dispatcher] Tarefa 2 está com 9 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 1 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 14 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 14 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 18 vagas e 0 pessoas na fila
+               T2: recebeu 22
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 0 vagas e 0 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 2 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 2 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 2
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 6 dormiu das 3974 até as 5109. Seu nap_time é de 1135
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas ativas
+[Dispatcher] Tarefa 6 está com 4 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 6
+[Task Switch] Trocando da tarefa 6 para 6
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 6
+[Semaphore Down] tarefa 6 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 14 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 6
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 14 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 15 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 6 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 0 vagas e 1 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 2 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 2 na lista de tarefas ativas
+T6 enviou 69
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 6 está indo dormir as 5109 com nap_time de 1167
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 2 está com 10 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 15 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 15 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 19 vagas e 0 pessoas na fila
+               T2: recebeu 69
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 0 vagas e 0 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 2 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 2 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 2
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 5)
+[Task Sleep] a tarefa de id 5 dormiu das 2334 até as 5260. Seu nap_time é de 2926
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas ativas
+[Dispatcher] Tarefa 5 está com 5 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 5
+[Task Switch] Trocando da tarefa 5 para 5
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 5
+[Semaphore Down] tarefa 5 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 15 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 5
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 15 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 16 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 5 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 0 vagas e 1 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 2 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 2 na lista de tarefas ativas
+T5 enviou 393
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 5 está indo dormir as 5260 com nap_time de 1456
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 2 está com 11 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 16 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 16 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 20 vagas e 0 pessoas na fila
+               T2: recebeu 393
+               T2: 22+69+393 = 484.000000 (raiz 22.000000)
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 5 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 5 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 6 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 2 iniciando no semáforo 5
+[Semaphore Up] semaforo tem 0 vagas e 1 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 3 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 3 na lista de tarefas ativas
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 2 está indo dormir as 5260 com nap_time de 2011
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 3 está com 6 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Task Switch] Trocando da tarefa 3 para 3
+[Semaphore Down] Reabilitando preempção em 3
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 3
+[Semaphore Down] tarefa 3 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 6 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 3
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 3 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 6 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 3 iniciando no semáforo 3
+[Semaphore Up] semaforo tem 10 vagas e 0 pessoas na fila
+                                 T3 consumiu 22.000000
+[Task Sleep] removendo a tarefa de id 3 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 3 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 3 está indo dormir as 5260 com nap_time de 1042
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 6 dormiu das 5109 até as 6276. Seu nap_time é de 1167
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas ativas
+[Dispatcher] Tarefa 6 está com 5 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 6
+[Task Switch] Trocando da tarefa 6 para 6
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 6
+[Semaphore Down] tarefa 6 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 16 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 6
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 16 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 17 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 6 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 1 vagas e 0 pessoas na fila
+T6 enviou 229
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 6 está indo dormir as 6276 com nap_time de 2373
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 3 dormiu das 5260 até as 6302. Seu nap_time é de 1042
+[Task Sleep] removendo a tarefa de id 3 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 3 na lista de tarefas ativas
+[Dispatcher] Tarefa 3 está com 7 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Task Switch] Trocando da tarefa 3 para 3
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 3
+[Semaphore Down] tarefa 3 iniciando no semáforo 5
+[Semaphore Down] semaforo tem 0 vagas e 0 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 3 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 3 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 3
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 5 dormiu das 5260 até as 6716. Seu nap_time é de 1456
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas ativas
+[Dispatcher] Tarefa 5 está com 6 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 5
+[Task Switch] Trocando da tarefa 5 para 5
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 5
+[Semaphore Down] tarefa 5 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 17 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 5
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 17 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 18 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 5 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 2 vagas e 0 pessoas na fila
+T5 enviou 421
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 5 está indo dormir as 6716 com nap_time de 1919
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 4)
+[Task Sleep] a tarefa de id 4 dormiu das 3974 até as 6776. Seu nap_time é de 2802
+[Task Sleep] removendo a tarefa de id 4 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 4 na lista de tarefas ativas
+[Dispatcher] Tarefa 4 está com 5 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 4
+[Task Switch] Trocando da tarefa 4 para 4
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 4
+[Semaphore Down] tarefa 4 iniciando no semáforo 5
+[Semaphore Down] semaforo tem -1 vagas e 1 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 4 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 4 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 4
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 7)
+[Task Sleep] a tarefa de id 7 dormiu das 4782 até as 6840. Seu nap_time é de 2058
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas ativas
+[Dispatcher] Tarefa 7 está com 7 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Task Switch] Trocando da tarefa 7 para 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 18 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 18 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 19 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 7 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 3 vagas e 0 pessoas na fila
+T7 enviou 784
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 7 está indo dormir as 6840 com nap_time de 1537
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 2)
+[Task Sleep] a tarefa de id 2 dormiu das 5260 até as 7271. Seu nap_time é de 2011
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas ativas
+[Dispatcher] Tarefa 2 está com 12 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 3 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 19 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 19 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 21 vagas e 0 pessoas na fila
+               T2: recebeu 229
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 2 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 19 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 19 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 22 vagas e 0 pessoas na fila
+               T2: recebeu 421
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 1 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 19 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 19 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 23 vagas e 0 pessoas na fila
+               T2: recebeu 784
+               T2: 229+421+784 = 1434.000000 (raiz 37.868192)
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 6 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 6 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 7 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 2 iniciando no semáforo 5
+[Semaphore Up] semaforo tem -1 vagas e 2 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 3 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 3 na lista de tarefas ativas
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 2 está indo dormir as 7271 com nap_time de 2198
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 3 está com 8 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Task Switch] Trocando da tarefa 3 para 3
+[Semaphore Down] Reabilitando preempção em 3
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 3
+[Semaphore Down] tarefa 3 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 7 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 3
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 3 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 7 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 3 iniciando no semáforo 3
+[Semaphore Up] semaforo tem 11 vagas e 0 pessoas na fila
+                                 T3 consumiu 37.868192
+[Task Sleep] removendo a tarefa de id 3 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 3 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 3 está indo dormir as 7271 com nap_time de 2324
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 7 dormiu das 6840 até as 8377. Seu nap_time é de 1537
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas ativas
+[Dispatcher] Tarefa 7 está com 8 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Task Switch] Trocando da tarefa 7 para 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 19 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 19 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 20 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 7 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 1 vagas e 0 pessoas na fila
+T7 enviou 315
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 7 está indo dormir as 8377 com nap_time de 2370
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 5 dormiu das 6716 até as 8635. Seu nap_time é de 1919
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas ativas
+[Dispatcher] Tarefa 5 está com 7 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 5
+[Task Switch] Trocando da tarefa 5 para 5
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 5
+[Semaphore Down] tarefa 5 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 20 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 5
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 20 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 21 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 5 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 2 vagas e 0 pessoas na fila
+T5 enviou 413
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 5 está indo dormir as 8635 com nap_time de 526
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 6)
+[Task Sleep] a tarefa de id 6 dormiu das 6276 até as 8649. Seu nap_time é de 2373
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas ativas
+[Dispatcher] Tarefa 6 está com 6 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 6
+[Task Switch] Trocando da tarefa 6 para 6
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 6
+[Semaphore Down] tarefa 6 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 21 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 6
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 21 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 22 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 6 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 3 vagas e 0 pessoas na fila
+T6 enviou 91
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 6 está indo dormir as 8649 com nap_time de 980
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 5 dormiu das 8635 até as 9161. Seu nap_time é de 526
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas ativas
+[Dispatcher] Tarefa 5 está com 8 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 5
+[Task Switch] Trocando da tarefa 5 para 5
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 5
+[Semaphore Down] tarefa 5 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 22 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 5
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 22 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 23 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 5 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 4 vagas e 0 pessoas na fila
+T5 enviou 956
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 5 está indo dormir as 9161 com nap_time de 873
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 2)
+[Task Sleep] a tarefa de id 2 dormiu das 7271 até as 9469. Seu nap_time é de 2198
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas ativas
+[Dispatcher] Tarefa 2 está com 13 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 4 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 23 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 23 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 24 vagas e 0 pessoas na fila
+               T2: recebeu 315
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 3 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 23 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 23 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 25 vagas e 0 pessoas na fila
+               T2: recebeu 413
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 2 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 23 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 23 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 26 vagas e 0 pessoas na fila
+               T2: recebeu 91
+               T2: 315+413+91 = 819.000000 (raiz 28.618176)
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 7 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 7 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 8 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 2 iniciando no semáforo 5
+[Semaphore Up] semaforo tem 0 vagas e 1 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 4 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 4 na lista de tarefas ativas
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 2 está indo dormir as 9469 com nap_time de 1862
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 4 está com 6 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 4
+[Task Switch] Trocando da tarefa 4 para 4
+[Semaphore Down] Reabilitando preempção em 4
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 4
+[Semaphore Down] tarefa 4 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 8 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 4
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 4 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 8 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 4 iniciando no semáforo 3
+[Semaphore Up] semaforo tem 12 vagas e 0 pessoas na fila
+                                 T4 consumiu 28.618176
+[Task Sleep] removendo a tarefa de id 4 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 4 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 4 está indo dormir as 9469 com nap_time de 170
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 3)
+[Task Sleep] a tarefa de id 3 dormiu das 7271 até as 9595. Seu nap_time é de 2324
+[Task Sleep] removendo a tarefa de id 3 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 3 na lista de tarefas ativas
+[Dispatcher] Tarefa 3 está com 9 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Task Switch] Trocando da tarefa 3 para 3
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 3
+[Semaphore Down] tarefa 3 iniciando no semáforo 5
+[Semaphore Down] semaforo tem 0 vagas e 0 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 3 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 3 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 3
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 6 dormiu das 8649 até as 9629. Seu nap_time é de 980
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas ativas
+[Dispatcher] Tarefa 6 está com 7 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 6
+[Task Switch] Trocando da tarefa 6 para 6
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 6
+[Semaphore Down] tarefa 6 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 23 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 6
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 23 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 24 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 6 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 2 vagas e 0 pessoas na fila
+T6 enviou 996
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 6 está indo dormir as 9629 com nap_time de 2281
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 4 dormiu das 9469 até as 9639. Seu nap_time é de 170
+[Task Sleep] removendo a tarefa de id 4 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 4 na lista de tarefas ativas
+[Dispatcher] Tarefa 4 está com 7 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 4
+[Task Switch] Trocando da tarefa 4 para 4
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 4
+[Semaphore Down] tarefa 4 iniciando no semáforo 5
+[Semaphore Down] semaforo tem -1 vagas e 1 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 4 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 4 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 4
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 5 dormiu das 9161 até as 10034. Seu nap_time é de 873
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas ativas
+[Dispatcher] Tarefa 5 está com 9 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 5
+[Task Switch] Trocando da tarefa 5 para 5
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 5
+[Semaphore Down] tarefa 5 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 24 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 5
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 24 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 25 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 5 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 3 vagas e 0 pessoas na fila
+T5 enviou 305
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 5 está indo dormir as 10034 com nap_time de 2925
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 7)
+[Task Sleep] a tarefa de id 7 dormiu das 8377 até as 10747. Seu nap_time é de 2370
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas ativas
+[Dispatcher] Tarefa 7 está com 9 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Task Switch] Trocando da tarefa 7 para 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 25 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 25 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 26 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 7 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 4 vagas e 0 pessoas na fila
+T7 enviou 84
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 7 está indo dormir as 10747 com nap_time de 327
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 7 dormiu das 10747 até as 11074. Seu nap_time é de 327
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas ativas
+[Dispatcher] Tarefa 7 está com 10 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Task Switch] Trocando da tarefa 7 para 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 26 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 26 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 27 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 7 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 5 vagas e 0 pessoas na fila
+T7 enviou 336
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 7 está indo dormir as 11074 com nap_time de 1505
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 2)
+[Task Sleep] a tarefa de id 2 dormiu das 9469 até as 11331. Seu nap_time é de 1862
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas ativas
+[Dispatcher] Tarefa 2 está com 14 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 5 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 27 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 27 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 27 vagas e 0 pessoas na fila
+               T2: recebeu 956
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 4 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 27 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 27 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 28 vagas e 0 pessoas na fila
+               T2: recebeu 996
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 3 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 27 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 27 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 29 vagas e 0 pessoas na fila
+               T2: recebeu 305
+               T2: 956+996+305 = 2257.000000 (raiz 47.507894)
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 8 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 8 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 9 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 2 iniciando no semáforo 5
+[Semaphore Up] semaforo tem -1 vagas e 2 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 3 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 3 na lista de tarefas ativas
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 2 está indo dormir as 11331 com nap_time de 1846
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 3 está com 10 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Task Switch] Trocando da tarefa 3 para 3
+[Semaphore Down] Reabilitando preempção em 3
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 3
+[Semaphore Down] tarefa 3 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 9 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 3
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 3 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 9 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 3 iniciando no semáforo 3
+[Semaphore Up] semaforo tem 13 vagas e 0 pessoas na fila
+                                 T3 consumiu 47.507894
+[Task Sleep] removendo a tarefa de id 3 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 3 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 3 está indo dormir as 11331 com nap_time de 729
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 6)
+[Task Sleep] a tarefa de id 6 dormiu das 9629 até as 11910. Seu nap_time é de 2281
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas ativas
+[Dispatcher] Tarefa 6 está com 8 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 6
+[Task Switch] Trocando da tarefa 6 para 6
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 6
+[Semaphore Down] tarefa 6 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 27 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 6
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 27 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 28 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 6 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 3 vagas e 0 pessoas na fila
+T6 enviou 313
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 6 está indo dormir as 11910 com nap_time de 857
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 3 dormiu das 11331 até as 12060. Seu nap_time é de 729
+[Task Sleep] removendo a tarefa de id 3 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 3 na lista de tarefas ativas
+[Dispatcher] Tarefa 3 está com 11 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Task Switch] Trocando da tarefa 3 para 3
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 3
+[Semaphore Down] tarefa 3 iniciando no semáforo 5
+[Semaphore Down] semaforo tem -1 vagas e 1 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 3 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 3 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 3
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 7 dormiu das 11074 até as 12579. Seu nap_time é de 1505
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas ativas
+[Dispatcher] Tarefa 7 está com 11 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Task Switch] Trocando da tarefa 7 para 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 28 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 28 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 29 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 7 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 4 vagas e 0 pessoas na fila
+T7 enviou 124
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 7 está indo dormir as 12579 com nap_time de 2895
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 6 dormiu das 11910 até as 12767. Seu nap_time é de 857
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas ativas
+[Dispatcher] Tarefa 6 está com 9 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 6
+[Task Switch] Trocando da tarefa 6 para 6
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 6
+[Semaphore Down] tarefa 6 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 29 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 6
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 29 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 30 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 6 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 5 vagas e 0 pessoas na fila
+T6 enviou 582
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 6 está indo dormir as 12767 com nap_time de 1545
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 5)
+[Task Sleep] a tarefa de id 5 dormiu das 10034 até as 12959. Seu nap_time é de 2925
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas ativas
+[Dispatcher] Tarefa 5 está com 10 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 5
+[Task Switch] Trocando da tarefa 5 para 5
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 5
+[Semaphore Down] tarefa 5 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 30 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 5
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 30 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 31 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 5 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 6 vagas e 0 pessoas na fila
+T5 enviou 814
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 5 está indo dormir as 12959 com nap_time de 2367
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 2)
+[Task Sleep] a tarefa de id 2 dormiu das 11331 até as 13177. Seu nap_time é de 1846
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas ativas
+[Dispatcher] Tarefa 2 está com 15 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 6 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 31 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 31 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 30 vagas e 0 pessoas na fila
+               T2: recebeu 814
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 5 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 31 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 31 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 31 vagas e 0 pessoas na fila
+               T2: recebeu 336
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 4 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 31 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 31 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 32 vagas e 0 pessoas na fila
+               T2: recebeu 313
+               T2: 814+336+313 = 1463.000000 (raiz 38.249183)
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 9 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 9 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 10 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 2 iniciando no semáforo 5
+[Semaphore Up] semaforo tem -1 vagas e 2 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 4 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 4 na lista de tarefas ativas
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 2 está indo dormir as 13177 com nap_time de 434
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 4 está com 8 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 4
+[Task Switch] Trocando da tarefa 4 para 4
+[Semaphore Down] Reabilitando preempção em 4
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 4
+[Semaphore Down] tarefa 4 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 10 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 4
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 4 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 10 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 4 iniciando no semáforo 3
+[Semaphore Up] semaforo tem 14 vagas e 0 pessoas na fila
+                                 T4 consumiu 38.249183
+[Task Sleep] removendo a tarefa de id 4 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 4 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 4 está indo dormir as 13177 com nap_time de 1364
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 2 dormiu das 13177 até as 13611. Seu nap_time é de 434
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas ativas
+[Dispatcher] Tarefa 2 está com 16 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 3 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 31 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 31 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 33 vagas e 0 pessoas na fila
+               T2: recebeu 124
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 2 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 31 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 31 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 34 vagas e 0 pessoas na fila
+               T2: recebeu 582
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 2
+[Semaphore Down] semaforo tem 1 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 31 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 31 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 2 iniciando no semáforo 0
+[Semaphore Up] semaforo tem 35 vagas e 0 pessoas na fila
+               T2: recebeu 814
+               T2: 124+582+814 = 1520.000000 (raiz 38.987177)
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 2
+[Semaphore Down] tarefa 2 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 10 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 2
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 10 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 2 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 11 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 2 iniciando no semáforo 5
+[Semaphore Up] semaforo tem 0 vagas e 1 pessoas na fila
+[Semaphore Up] acordando primeira tarefa
+[Semaphore Wake Up First] removendo a tarefa de id 3 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 3 na lista de tarefas ativas
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 2 está indo dormir as 13611 com nap_time de 2043
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 3 está com 12 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Task Switch] Trocando da tarefa 3 para 3
+[Semaphore Down] Reabilitando preempção em 3
+[Mqueue Recv] Down no semáforo do buffer
+[Semaphore Down] desabilitando preempção em 3
+[Semaphore Down] tarefa 3 iniciando no semáforo 4
+[Semaphore Down] semaforo tem 11 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 3
+[Mqueue Recv] Up no semáforo do buffer
+[Semaphore Up] tarefa 3 iniciando no semáforo 4
+[Semaphore Up] semaforo tem 11 vagas e 0 pessoas na fila
+[Mqueue Recv] Up no semáforo de vagas
+[Semaphore Up] tarefa 3 iniciando no semáforo 3
+[Semaphore Up] semaforo tem 15 vagas e 0 pessoas na fila
+                                 T3 consumiu 38.987177
+[Task Sleep] removendo a tarefa de id 3 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 3 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 3 está indo dormir as 13611 com nap_time de 2750
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 6 dormiu das 12767 até as 14312. Seu nap_time é de 1545
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas ativas
+[Dispatcher] Tarefa 6 está com 10 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 6
+[Task Switch] Trocando da tarefa 6 para 6
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 6
+[Semaphore Down] tarefa 6 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 31 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 6
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 31 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 6 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 32 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 6 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 1 vagas e 0 pessoas na fila
+T6 enviou 87
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 6 está indo dormir as 14312 com nap_time de 2808
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 4 dormiu das 13177 até as 14541. Seu nap_time é de 1364
+[Task Sleep] removendo a tarefa de id 4 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 4 na lista de tarefas ativas
+[Dispatcher] Tarefa 4 está com 9 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 4
+[Task Switch] Trocando da tarefa 4 para 4
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+[Semaphore Down] desabilitando preempção em 4
+[Semaphore Down] tarefa 4 iniciando no semáforo 5
+[Semaphore Down] semaforo tem 0 vagas e 0 pessoas na fila
+[Semaphore Down] removendo a tarefa de id 4 na lista de tarefas ativas
+[Semaphore Down] adicionando a tarefa de id 4 na lista de tarefas do semáforo
+[Semaphore Down] Reabilitando preempção em 4
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 5 dormiu das 12959 até as 15326. Seu nap_time é de 2367
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas ativas
+[Dispatcher] Tarefa 5 está com 11 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 5
+[Task Switch] Trocando da tarefa 5 para 5
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 5
+[Semaphore Down] tarefa 5 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 32 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 5
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 32 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 5 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 33 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 5 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 2 vagas e 0 pessoas na fila
+T5 enviou 276
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 5 está indo dormir as 15326 com nap_time de 1178
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 7)
+[Task Sleep] a tarefa de id 7 dormiu das 12579 até as 15474. Seu nap_time é de 2895
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas ativas
+[Dispatcher] Tarefa 7 está com 12 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Task Switch] Trocando da tarefa 7 para 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+[Semaphore Down] desabilitando preempção em 7
+[Semaphore Down] tarefa 7 iniciando no semáforo 1
+[Semaphore Down] semaforo tem 33 vagas e 0 pessoas na fila
+[Semaphore Down] Reabilitando preempção em 7
+[Mqueue Send] Down no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 33 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo do buffer
+[Semaphore Up] tarefa 7 iniciando no semáforo 1
+[Semaphore Up] semaforo tem 34 vagas e 0 pessoas na fila
+[Mqueue Send] Up no semáforo de itens
+[Semaphore Up] tarefa 7 iniciando no semáforo 2
+[Semaphore Up] semaforo tem 3 vagas e 0 pessoas na fila
+T7 enviou 788
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas ativas
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas dormentes
+[Task Sleep] a tarefa de id 7 está indo dormir as 15474 com nap_time de 1584
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 2)
+[Task Sleep] a tarefa de id 2 dormiu das 13611 até as 15654. Seu nap_time é de 2043
+[Task Sleep] removendo a tarefa de id 2 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 2 na lista de tarefas ativas
+[Dispatcher] Tarefa 2 está com 17 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 2
+[Task Switch] Trocando da tarefa 2 para 2
+Task 2 exit: execution time 15654 ms, processor time 17 ms, 17 activations
+[Task Exit] A tarefa 2 já está fora da fila de tarefas
+[Check Suspended Tasks] verificando as 1 tarefas suspensas
+[Check Suspended Tasks] primeira tarefa considerada: (id 0)
+[Check Suspended Tasks] acordando a primeira tarefa da lista de suspensas (id 0)
+[Wake Up Task] acordando a tarefa de id 0
+[Task Join] removendo a tarefa de id 0 da lista de tarefas suspensas
+[Task Join] adicionando a tarefa de id 0 na lista de tarefas ativas
+[Check Suspended Tasks] verificando as 0 tarefas suspensas
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 0 está com 2 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 0
+[Task Switch] Trocando da tarefa 0 para 0
+[Task Join] a tarefa de id 0 voltou a ser processada
+main: destroi queueValores
+[Mqueue Destroy] Destruindo fila de mensagens
+[Mqueue Destroy] Destruindo semáfotos
+[Mqueue Destroy] Desalocando buffer
+main: destroi queueRaizes
+[Mqueue Destroy] Destruindo fila de mensagens
+[Mqueue Destroy] Destruindo semáfotos
+[Semaphore Wake Up First] removendo a tarefa de id 4 das lista de tarefas do semaforo
+[Semaphore Wake Up First] adicionando a tarefa de id 4 na lista de tarefas ativas
+[Mqueue Destroy] Desalocando buffer
+main: fim
+Task 0 exit: execution time 15654 ms, processor time 2 ms, 2 activations
+[Task Exit] A tarefa 0 já está fora da fila de tarefas
+[Check Suspended Tasks] verificando as 0 tarefas suspensas
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Tarefa 4 está com 10 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 4
+[Task Switch] Trocando da tarefa 4 para 4
+[Semaphore Down] Reabilitando preempção em 4
+[Mqueue Recv] Down no semáforo do buffer
+                                 T4 terminou
+Task 4 exit: execution time 15654 ms, processor time 10 ms, 10 activations
+[Task Exit] A tarefa 4 já está fora da fila de tarefas
+[Check Suspended Tasks] verificando as 0 tarefas suspensas
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 3)
+[Task Sleep] a tarefa de id 3 dormiu das 13611 até as 16361. Seu nap_time é de 2750
+[Task Sleep] removendo a tarefa de id 3 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 3 na lista de tarefas ativas
+[Dispatcher] Tarefa 3 está com 13 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 3
+[Task Switch] Trocando da tarefa 3 para 3
+[Mqueue Recv] Consumindo mensagem para a fila de mensagens com ID 1 com 5 espaços
+[Mqueue Recv] Down no semáforo de itens
+                                 T3 terminou
+Task 3 exit: execution time 16361 ms, processor time 13 ms, 13 activations
+[Task Exit] A tarefa 3 já está fora da fila de tarefas
+[Check Suspended Tasks] verificando as 0 tarefas suspensas
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 5 dormiu das 15326 até as 16504. Seu nap_time é de 1178
+[Task Sleep] removendo a tarefa de id 5 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 5 na lista de tarefas ativas
+[Dispatcher] Tarefa 5 está com 12 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 5
+[Task Switch] Trocando da tarefa 5 para 5
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+T5 terminou
+Task 5 exit: execution time 16504 ms, processor time 12 ms, 12 activations
+[Task Exit] A tarefa 5 já está fora da fila de tarefas
+[Check Suspended Tasks] verificando as 0 tarefas suspensas
+[Task Switch] Trocando da tarefa 1 para 1
+[Task Sleep] a tarefa de id 7 dormiu das 15474 até as 17058. Seu nap_time é de 1584
+[Task Sleep] removendo a tarefa de id 7 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 7 na lista de tarefas ativas
+[Dispatcher] Tarefa 7 está com 13 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 7
+[Task Switch] Trocando da tarefa 7 para 7
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+T7 terminou
+Task 7 exit: execution time 17058 ms, processor time 13 ms, 13 activations
+[Task Exit] A tarefa 7 já está fora da fila de tarefas
+[Check Suspended Tasks] verificando as 0 tarefas suspensas
+[Task Switch] Trocando da tarefa 1 para 1
+[Check Sleeping Tasks] acordando a primeira tarefa da lista de dormentes (id 6)
+[Task Sleep] a tarefa de id 6 dormiu das 14312 até as 17120. Seu nap_time é de 2808
+[Task Sleep] removendo a tarefa de id 6 da lista de tarefas dormentes
+[Task Sleep] adicionando a tarefa de id 6 na lista de tarefas ativas
+[Dispatcher] Tarefa 6 está com 11 ativacões
+[Dispatcher] Dispatcher trocando para a tarefa 6
+[Task Switch] Trocando da tarefa 6 para 6
+[Mqueue Send] Enviando mensagem para a fila de mensagens com ID 0 com 5 espaços
+[Mqueue Send] Down no semáforo de vagas
+T6 terminou
+Task 6 exit: execution time 17120 ms, processor time 11 ms, 11 activations
+[Task Exit] A tarefa 6 já está fora da fila de tarefas
+[Check Suspended Tasks] verificando as 0 tarefas suspensas
+[Task Switch] Trocando da tarefa 1 para 1
+[Dispatcher] Fim do dispatcher
+Task 1 exit: execution time 17120 ms, processor time 0 ms, 78 activations
+[Task Exit] Liberando a memória do dispatcher
